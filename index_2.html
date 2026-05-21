@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ピル処方クリニック比較｜オンライン診療おすすめランキング2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#222;--ink2:#555;--ink3:#999;--ink4:#bbb;
+  --bg:#f7f7f5;--bg2:#fff;--bg3:#f0f0ee;
+  --gr:#00b894;--gr2:#00a381;--gr3:#e8f8f4;
+  --red:#e17055;--amber:#fdcb6e;
+  --bdr:#ececea;--bdr2:#e0e0de;
+  --r:12px;--r2:8px;--r3:100px;
+  --sans:'Noto Sans JP',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased;font-size:14px}
+
+/* NAV */
+nav{
+  background:#fff;border-bottom:1px solid var(--bdr);
+  padding:0 20px;height:56px;
+  display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+}
+.logo{font-size:18px;font-weight:700;color:var(--gr);letter-spacing:-.01em}
+.logo span{color:var(--ink);font-weight:400;font-size:13px;margin-left:4px}
+.nav-r{display:flex;align-items:center;gap:12px}
+.nav-login{font-size:13px;color:var(--ink3);border:none;background:none;cursor:pointer;padding:6px 10px}
+.nav-register{font-size:13px;font-weight:500;background:var(--gr);color:#fff;border:none;padding:8px 18px;border-radius:var(--r3);cursor:pointer}
+
+/* SEARCH HERO */
+.search-hero{background:#fff;padding:24px 20px 0;border-bottom:1px solid var(--bdr)}
+.search-hero h1{font-size:18px;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
+.search-hero p{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.search-box{
+  display:flex;align-items:center;gap:8px;
+  background:var(--bg);border:1.5px solid var(--bdr2);
+  border-radius:var(--r3);padding:10px 16px;margin-bottom:16px;
+}
+.search-box input{
+  border:none;background:none;font-size:14px;font-family:var(--sans);
+  flex:1;outline:none;color:var(--ink);
+}
+.search-box input::placeholder{color:var(--ink4)}
+.search-icon{width:18px;height:18px;color:var(--ink3);flex-shrink:0}
+
+/* CATEGORY TABS */
+.cat-tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+.cat-tabs::-webkit-scrollbar{display:none}
+.ctab{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  flex-shrink:0;cursor:pointer;
+  font-size:11px;color:var(--ink3);letter-spacing:.02em;
+  padding:2px 4px;border-bottom:2px solid transparent;transition:all .15s;
+}
+.ctab.on{color:var(--gr);border-bottom-color:var(--gr)}
+.ctab-icon{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--bg3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;transition:background .15s;
+}
+.ctab.on .ctab-icon{background:var(--gr3)}
+
+/* FILTER STRIP */
+.filter-strip{
+  background:#fff;padding:12px 20px;
+  display:flex;gap:8px;overflow-x:auto;
+  border-bottom:1px solid var(--bdr);
+  -webkit-overflow-scrolling:touch;
+}
+.filter-strip::-webkit-scrollbar{display:none}
+.fpill{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12px;color:var(--ink2);
+  border:1px solid var(--bdr2);background:#fff;
+  padding:6px 14px;border-radius:var(--r3);
+  white-space:nowrap;cursor:pointer;flex-shrink:0;transition:all .15s;
+}
+.fpill.on{background:var(--gr);color:#fff;border-color:var(--gr)}
+.fpill svg{width:14px;height:14px}
+
+/* SORT BAR */
+.sort-bar{
+  padding:12px 20px;display:flex;align-items:center;justify-content:space-between;
+}
+.result-count{font-size:13px;color:var(--ink3)}
+.result-count strong{color:var(--ink);font-weight:700}
+.sort-select{
+  font-size:12px;color:var(--ink2);border:1px solid var(--bdr2);
+  background:#fff;padding:6px 10px;border-radius:var(--r2);
+  font-family:var(--sans);cursor:pointer;outline:none;
+}
+
+/* CLINIC CARDS GRID */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+  gap:12px;padding:0 16px 24px;
+}
+
+/* CLINIC CARD */
+.ccard{
+  background:#fff;border-radius:var(--r);
+  border:1px solid var(--bdr);
+  overflow:hidden;cursor:pointer;
+  transition:transform .15s,box-shadow .15s;
+  position:relative;
+}
+.ccard:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.08)}
+
+.ccard-img{
+  width:100%;height:160px;
+  background:linear-gradient(135deg,var(--bg3) 0%,#e8f4f0 100%);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.ccard-img-icon{font-size:56px;line-height:1}
+.rank-pin{
+  position:absolute;top:12px;left:12px;
+  width:32px;height:32px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:#fff;
+}
+.rank-pin.r1{background:var(--gr)}
+.rank-pin.r2{background:var(--amber);color:var(--ink)}
+.rank-pin.r3{background:var(--ink3)}
+.rank-pin.rn{background:var(--ink4)}
+.fav-btn{
+  position:absolute;top:10px;right:10px;
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(255,255,255,.9);border:none;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;transition:all .15s;
+}
+.fav-btn:hover{background:#fff}
+.badge-strip{position:absolute;bottom:10px;left:12px;display:flex;gap:5px}
+.mbadge{
+  font-size:10px;font-weight:500;letter-spacing:.04em;
+  padding:3px 9px;border-radius:var(--r3);
+}
+.mbadge.green{background:var(--gr);color:#fff}
+.mbadge.white{background:rgba(255,255,255,.92);color:var(--ink2)}
+.mbadge.amber{background:var(--amber);color:var(--ink)}
+
+.ccard-body{padding:14px 14px 12px}
+.clinic-row{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:8px}
+.clinic-name{font-size:16px;font-weight:700;letter-spacing:-.01em;line-height:1.3}
+.score-pill{
+  display:flex;align-items:center;gap:3px;
+  font-size:12px;font-weight:700;color:var(--gr);flex-shrink:0;
+}
+.score-star{font-size:13px}
+.clinic-catch{font-size:12px;color:var(--ink3);line-height:1.7;margin-bottom:10px}
+
+.price-row{
+  display:flex;align-items:baseline;gap:6px;
+  margin-bottom:10px;
+}
+.price-label{font-size:11px;color:var(--ink3)}
+.price-main{font-size:20px;font-weight:700;color:var(--gr);letter-spacing:-.01em}
+.price-unit{font-size:12px;color:var(--ink3)}
+.price-orig{font-size:11px;color:var(--ink4);text-decoration:line-through}
+
+.spec-chips{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
+.chip{
+  font-size:11px;color:var(--gr2);
+  background:var(--gr3);border:1px solid #c8ede4;
+  padding:3px 9px;border-radius:var(--r3);white-space:nowrap;
+}
+.chip.gray{color:var(--ink3);background:var(--bg3);border-color:var(--bdr)}
+
+.ccard-footer{
+  border-top:1px solid var(--bdr);
+  padding:10px 14px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.review-info{font-size:11px;color:var(--ink3)}
+.review-info strong{color:var(--ink2);font-weight:500}
+.btn-reserve{
+  background:var(--gr);color:#fff;
+  font-size:12px;font-weight:700;
+  border:none;padding:8px 16px;border-radius:var(--r3);
+  cursor:pointer;font-family:var(--sans);transition:background .15s;letter-spacing:.03em;
+}
+.btn-reserve:hover{background:var(--gr2)}
+
+/* PICKUP BANNER */
+.pickup-banner{
+  margin:0 16px 16px;
+  background:var(--gr);border-radius:var(--r);
+  padding:16px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.pickup-banner p{font-size:13px;color:rgba(255,255,255,.8);line-height:1.7}
+.pickup-banner strong{font-size:15px;color:#fff;display:block;font-weight:700;margin-bottom:2px}
+.pickup-btn{
+  background:#fff;color:var(--gr);font-size:12px;font-weight:700;
+  border:none;padding:10px 16px;border-radius:var(--r3);cursor:pointer;white-space:nowrap;flex-shrink:0;
+}
+
+/* COMPARISON TABLE */
+.sec{padding:24px 16px}
+.sec-h{font-size:16px;font-weight:700;margin-bottom:4px;letter-spacing:-.01em}
+.sec-sub{font-size:12px;color:var(--ink3);margin-bottom:16px}
+.tbl-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--bdr)}
+table{width:100%;border-collapse:collapse;font-size:12px;background:#fff}
+thead th{
+  padding:12px 14px;background:var(--ink);color:rgba(255,255,255,.7);
+  font-weight:500;white-space:nowrap;text-align:center;letter-spacing:.04em;
+}
+thead th:first-child{text-align:left;min-width:120px}
+tbody td{padding:12px 14px;text-align:center;color:var(--ink2);border-bottom:1px solid var(--bdr)}
+tbody td:first-child{text-align:left;font-weight:500;color:var(--ink)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--bg)}
+.tbl-best{background:#f0faf5!important}
+.ok{color:var(--gr);font-size:14px}
+.ng{color:var(--ink4);font-size:14px}
+.tbl-badge{display:inline-block;background:var(--gr);color:#fff;font-size:9px;font-weight:700;padding:2px 7px;border-radius:var(--r3);margin-left:4px;letter-spacing:.04em}
+
+/* Q&A */
+.qa-list{display:flex;flex-direction:column;gap:8px}
+.qa-card{background:#fff;border-radius:var(--r);border:1px solid var(--bdr);overflow:hidden;cursor:pointer}
+.qa-q{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:16px;font-size:13px;font-weight:500;color:var(--ink);line-height:1.6;
+}
+.q-icon{
+  width:24px;height:24px;border-radius:50%;
+  background:var(--gr);color:#fff;font-size:12px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;
+}
+.qa-a{
+  display:none;padding:0 16px 16px 52px;
+  font-size:12px;color:var(--ink2);line-height:2;
+}
+.qa-a.open{display:block}
+.qa-card.open .qa-q{background:var(--gr3)}
+
+/* FLOW */
+.flow-list{display:flex;flex-direction:column;gap:0;position:relative}
+.flow-list::before{content:'';position:absolute;left:19px;top:20px;bottom:20px;width:2px;background:var(--gr3)}
+.flow-item{display:flex;gap:16px;align-items:flex-start;background:#fff;border-radius:var(--r);border:1px solid var(--bdr);padding:16px;margin-bottom:8px;position:relative;z-index:1}
+.flow-num{width:38px;height:38px;border-radius:50%;background:var(--gr);color:#fff;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.flow-body{}
+.flow-h{font-size:14px;font-weight:700;margin-bottom:3px}
+.flow-p{font-size:12px;color:var(--ink3);line-height:1.8}
+
+/* ARTICLE CARDS */
+.art-scroll{display:flex;gap:10px;overflow-x:auto;padding:0 16px 4px;-webkit-overflow-scrolling:touch}
+.art-scroll::-webkit-scrollbar{display:none}
+.acard{background:#fff;border-radius:var(--r);border:1px solid var(--bdr);overflow:hidden;flex-shrink:0;width:220px;cursor:pointer}
+.acard-img{height:100px;background:var(--bg3);display:flex;align-items:center;justify-content:center;font-size:36px}
+.acard-body{padding:10px 12px}
+.acard-cat{font-size:10px;color:var(--gr);font-weight:500;letter-spacing:.08em;margin-bottom:4px;text-transform:uppercase}
+.acard-h{font-size:12px;font-weight:500;line-height:1.65;margin-bottom:4px}
+.acard-m{font-size:10px;color:var(--ink3)}
+
+/* BOTTOM CTA */
+.bottom-cta{
+  margin:0 16px 24px;background:var(--gr);border-radius:var(--r);
+  padding:20px;text-align:center;
+}
+.bottom-cta h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+.bottom-cta p{font-size:12px;color:rgba(255,255,255,.7);margin-bottom:16px;line-height:1.8}
+.btn-cta{
+  display:inline-block;background:#fff;color:var(--gr);
+  font-size:14px;font-weight:700;padding:14px 28px;border-radius:var(--r3);
+  border:none;cursor:pointer;font-family:var(--sans);width:100%;
+}
+
+/* DISCLAIMER */
+.disclaimer{padding:12px 16px;font-size:10px;color:var(--ink4);line-height:2;border-top:1px solid var(--bdr);background:#fff}
+
+/* FOOTER */
+footer{background:var(--ink);padding:32px 16px 20px}
+.ft-logo{font-size:18px;font-weight:700;color:var(--gr);margin-bottom:8px}
+.ft-desc{font-size:11px;color:rgba(255,255,255,.3);line-height:2;margin-bottom:20px}
+.ft-links{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}
+.ft-links a{font-size:11px;color:rgba(255,255,255,.3);text-decoration:none}
+.ft-copy{font-size:10px;color:rgba(255,255,255,.18);border-top:1px solid rgba(255,255,255,.07);padding-top:16px}
+
+/* STICKY FOOTER */
+.sticky-footer{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:#fff;border-top:1px solid var(--bdr);
+  padding:10px 16px;display:flex;gap:8px;
+}
+.sf-btn{
+  flex:1;background:var(--gr);color:#fff;font-size:14px;font-weight:700;
+  border:none;padding:14px 0;border-radius:var(--r3);cursor:pointer;
+  font-family:var(--sans);letter-spacing:.03em;
+}
+.sf-btn.sub{background:#fff;color:var(--gr);border:1.5px solid var(--gr)}
+
+body{padding-bottom:72px}
+
+@media(min-width:640px){
+  nav{padding:0 32px}
+  .search-hero{padding:32px 32px 0}
+  .filter-strip,.sort-bar{padding:12px 32px}
+  .cards-grid{padding:0 28px 32px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+  .sec,.pickup-banner,.bottom-cta{margin-left:12px;margin-right:12px}
+  .sec{padding:32px 28px}
+  .art-scroll{padding:0 28px 4px}
+  .sticky-footer{padding:10px 32px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">ぴるナビ<span>オンライン処方クリニック比較</span></div>
+  <div class="nav-r">
+    <button class="nav-login">ログイン</button>
+    <button class="nav-register">無料で始める</button>
+  </div>
+</nav>
+
+<!-- SEARCH HERO -->
+<div class="search-hero">
+  <h1>ピル処方クリニックを探す</h1>
+  <p>2026年5月更新 · 14院比較 · 実質費用で選べる</p>
+  <div class="search-box">
+    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input type="text" placeholder="クリニック名・メニューで検索">
+  </div>
+  <div class="cat-tabs">
+    <div class="ctab on"><div class="ctab-icon">💊</div>低用量ピル</div>
+    <div class="ctab"><div class="ctab-icon">🆘</div>アフターピル</div>
+    <div class="ctab"><div class="ctab-icon">💆</div>PMS・月経困難</div>
+    <div class="ctab"><div class="ctab-icon">🌙</div>避妊・生理管理</div>
+    <div class="ctab"><div class="ctab-icon">💰</div>費用で選ぶ</div>
+    <div class="ctab"><div class="ctab-icon">⚡</div>急ぎで欲しい</div>
+  </div>
+</div>
+
+<!-- FILTER -->
+<div class="filter-strip">
+  <button class="fpill on" onclick="filt('all',this)">すべて</button>
+  <button class="fpill" onclick="filt('free',this)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    初診料無料
+  </button>
+  <button class="fpill" onclick="filt('delivery',this)">送料無料</button>
+  <button class="fpill" onclick="filt('fast',this)">当日・翌日配送</button>
+  <button class="fpill" onclick="filt('box',this)">宅配BOX対応</button>
+  <button class="fpill" onclick="filt('app',this)">アプリ完結</button>
+  <button class="fpill" onclick="filt('afterpill',this)">アフターピル対応</button>
+</div>
+
+<!-- SORT -->
+<div class="sort-bar">
+  <p class="result-count"><strong id="count">5</strong>件のクリニック</p>
+  <select class="sort-select">
+    <option>おすすめ順</option>
+    <option>料金の安い順</option>
+    <option>評価の高い順</option>
+    <option>配送の速い順</option>
+  </select>
+</div>
+
+<!-- PICKUP BANNER -->
+<div class="pickup-banner">
+  <div>
+    <strong>初診料・送料ともに無料</strong>
+    <p>スマルナは初診から定期便まで追加費用なし。月1,980円〜で始められます。</p>
+  </div>
+  <button class="pickup-btn">詳細を見る</button>
+</div>
+
+<!-- CARDS -->
+<div class="cards-grid" id="cards">
+
+  <div class="ccard" data-tags="all free delivery fast box app">
+    <div class="ccard-img">
+      <div class="ccard-img-icon">🌿</div>
+      <div class="rank-pin r1">1</div>
+      <button class="fav-btn">♡</button>
+      <div class="badge-strip">
+        <span class="mbadge green">人気No.1</span>
+        <span class="mbadge white">アプリ完結</span>
+      </div>
+    </div>
+    <div class="ccard-body">
+      <div class="clinic-row">
+        <div class="clinic-name">スマルナ</div>
+        <div class="score-pill"><span class="score-star">★</span>4.8</div>
+      </div>
+      <p class="clinic-catch">初診料・送料ともに無料。アプリ1つで診察〜配送まで完結。宅配BOX受け取りも可能。</p>
+      <div class="price-row">
+        <span class="price-label">月額</span>
+        <span class="price-main">¥1,980</span>
+        <span class="price-unit">〜（定期便）</span>
+      </div>
+      <div class="spec-chips">
+        <span class="chip">初診料無料</span>
+        <span class="chip">送料無料</span>
+        <span class="chip">宅配BOX</span>
+        <span class="chip">後払いOK</span>
+        <span class="chip">24時間受付</span>
+      </div>
+    </div>
+    <div class="ccard-footer">
+      <div class="review-info"><strong>3,241件</strong> のレビュー</div>
+      <button class="btn-reserve">詳細を見る</button>
+    </div>
+  </div>
+
+  <div class="ccard" data-tags="all delivery app">
+    <div class="ccard-img" style="background:linear-gradient(135deg,#f0e8f8,#e8d0f0)">
+      <div class="ccard-img-icon">🌸</div>
+      <div class="rank-pin r2">2</div>
+      <button class="fav-btn">♡</button>
+      <div class="badge-strip">
+        <span class="mbadge white">生理管理連携</span>
+      </div>
+    </div>
+    <div class="ccard-body">
+      <div class="clinic-row">
+        <div class="clinic-name">ルナルナ おくすり便</div>
+        <div class="score-pill"><span class="score-star">★</span>4.5</div>
+      </div>
+      <p class="clinic-catch">ルナルナアプリと連携。生理・服薬管理が1つのアプリで完結する女性専用設計。</p>
+      <div class="price-row">
+        <span class="price-label">月額</span>
+        <span class="price-main">¥2,380</span>
+        <span class="price-unit">〜（定期便）</span>
+      </div>
+      <div class="spec-chips">
+        <span class="chip">ルナルナ連携</span>
+        <span class="chip">飲み忘れ通知</span>
+        <span class="chip">送料無料</span>
+        <span class="chip gray">初診550円</span>
+      </div>
+    </div>
+    <div class="ccard-footer">
+      <div class="review-info"><strong>1,874件</strong> のレビュー</div>
+      <button class="btn-reserve">詳細を見る</button>
+    </div>
+  </div>
+
+  <div class="ccard" data-tags="all fast box afterpill">
+    <div class="ccard-img" style="background:linear-gradient(135deg,#e8f0f8,#d0e4f8)">
+      <div class="ccard-img-icon">⚡</div>
+      <div class="rank-pin r3">3</div>
+      <button class="fav-btn">♡</button>
+      <div class="badge-strip">
+        <span class="mbadge amber">当日処方可</span>
+        <span class="mbadge white">アフターピル</span>
+      </div>
+    </div>
+    <div class="ccard-body">
+      <div class="clinic-row">
+        <div class="clinic-name">クリニックフォア</div>
+        <div class="score-pill"><span class="score-star">★</span>4.3</div>
+      </div>
+      <p class="clinic-catch">最短当日処方・翌日配送に対応。緊急時のアフターピル処方でも実績多数。</p>
+      <div class="price-row">
+        <span class="price-label">月額</span>
+        <span class="price-main">¥2,690</span>
+        <span class="price-unit">〜</span>
+      </div>
+      <div class="spec-chips">
+        <span class="chip">当日処方</span>
+        <span class="chip">アフターピル対応</span>
+        <span class="chip">PayPay対応</span>
+        <span class="chip gray">配送料550円</span>
+      </div>
+    </div>
+    <div class="ccard-footer">
+      <div class="review-info"><strong>2,103件</strong> のレビュー</div>
+      <button class="btn-reserve">詳細を見る</button>
+    </div>
+  </div>
+
+  <div class="ccard" data-tags="all free delivery">
+    <div class="ccard-img" style="background:linear-gradient(135deg,#f8f0e8,#f0e0c8)">
+      <div class="ccard-img-icon">🌼</div>
+      <div class="rank-pin rn">4</div>
+      <button class="fav-btn">♡</button>
+      <div class="badge-strip">
+        <span class="mbadge white">初月無料</span>
+      </div>
+    </div>
+    <div class="ccard-body">
+      <div class="clinic-row">
+        <div class="clinic-name">メデリピル</div>
+        <div class="score-pill"><span class="score-star">★</span>4.1</div>
+      </div>
+      <p class="clinic-catch">初月無料トライアルあり。初めてピルを試す方向けの手厚いサポートが特徴。</p>
+      <div class="price-row">
+        <span class="price-label">月額</span>
+        <span class="price-main">¥2,970</span>
+        <span class="price-unit">〜</span>
+        <span class="price-orig">初月無料</span>
+      </div>
+      <div class="spec-chips">
+        <span class="chip">初月無料</span>
+        <span class="chip">初診料無料</span>
+        <span class="chip">送料無料</span>
+      </div>
+    </div>
+    <div class="ccard-footer">
+      <div class="review-info"><strong>987件</strong> のレビュー</div>
+      <button class="btn-reserve">詳細を見る</button>
+    </div>
+  </div>
+
+  <div class="ccard" data-tags="all free">
+    <div class="ccard-img" style="background:linear-gradient(135deg,#eef8ee,#d0ecd0)">
+      <div class="ccard-img-icon">💴</div>
+      <div class="rank-pin rn">5</div>
+      <button class="fav-btn">♡</button>
+      <div class="badge-strip">
+        <span class="mbadge green">最安クラス</span>
+      </div>
+    </div>
+    <div class="ccard-body">
+      <div class="clinic-row">
+        <div class="clinic-name">ピルパレット</div>
+        <div class="score-pill"><span class="score-star">★</span>3.9</div>
+      </div>
+      <p class="clinic-catch">ジェネリック対応で月1,650円〜と最安クラス。費用を最優先したい方向け。</p>
+      <div class="price-row">
+        <span class="price-label">月額</span>
+        <span class="price-main">¥1,650</span>
+        <span class="price-unit">〜（ジェネリック）</span>
+      </div>
+      <div class="spec-chips">
+        <span class="chip">最安クラス</span>
+        <span class="chip">初診料無料</span>
+        <span class="chip">ジェネリック対応</span>
+        <span class="chip gray">配送料330円</span>
+      </div>
+    </div>
+    <div class="ccard-footer">
+      <div class="review-info"><strong>623件</strong> のレビュー</div>
+      <button class="btn-reserve">詳細を見る</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- COMPARISON TABLE -->
+<div class="sec">
+  <p class="sec-h">一覧で比較する</p>
+  <p class="sec-sub">主要5クリニックを23項目で比較</p>
+  <div class="tbl-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:left">クリニック</th>
+          <th>初診料</th><th>月額</th><th>送料</th>
+          <th>最短配送</th><th>宅配BOX</th><th>後払い</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tbl-best">
+          <td>スマルナ <span class="tbl-badge">1位</span></td>
+          <td class="ok">無料</td><td><strong>1,980円〜</strong></td>
+          <td class="ok">無料</td><td>翌日〜</td>
+          <td class="ok">✓</td><td class="ok">✓</td>
+        </tr>
+        <tr>
+          <td>ルナルナ</td>
+          <td class="ng">550円</td><td>2,380円〜</td>
+          <td class="ok">無料</td><td>2〜3日</td>
+          <td class="ng">✗</td><td class="ng">✗</td>
+        </tr>
+        <tr>
+          <td>クリニックフォア</td>
+          <td class="ng">550円</td><td>2,690円〜</td>
+          <td class="ng">550円</td><td><strong>当日〜</strong></td>
+          <td class="ok">✓</td><td class="ng">✗</td>
+        </tr>
+        <tr>
+          <td>メデリピル</td>
+          <td class="ok">無料</td><td>2,970円〜</td>
+          <td class="ok">無料</td><td>2〜4日</td>
+          <td class="ng">✗</td><td class="ng">✗</td>
+        </tr>
+        <tr>
+          <td>ピルパレット</td>
+          <td class="ok">無料</td><td><strong>1,650円〜</strong></td>
+          <td class="ng">330円</td><td>3〜5日</td>
+          <td class="ng">✗</td><td class="ng">✗</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- FLOW -->
+<div class="sec" style="padding-top:0">
+  <p class="sec-h">はじめての方へ　処方の流れ</p>
+  <p class="sec-sub">最短5分で申し込めます</p>
+  <div class="flow-list">
+    <div class="flow-item">
+      <div class="flow-num">1</div>
+      <div class="flow-body">
+        <div class="flow-h">クリニックを選ぶ</div>
+        <p class="flow-p">費用・速度・機能で絞り込み。迷ったらスマルナが最もバランスが良い。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">2</div>
+      <div class="flow-body">
+        <div class="flow-h">オンライン問診（約5分）</div>
+        <p class="flow-p">アプリまたはブラウザで健康状態を入力。カメラ不要のクリニックも多い。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">3</div>
+      <div class="flow-body">
+        <div class="flow-h">医師が処方・発送</div>
+        <p class="flow-p">審査後に処方。最短当日発送。宅配ボックス受け取り・無地封筒対応あり。</p>
+      </div>
+    </div>
+    <div class="flow-item">
+      <div class="flow-num">4</div>
+      <div class="flow-body">
+        <div class="flow-h">定期便で継続</div>
+        <p class="flow-p">毎月自動発送。副作用の相談もアプリ内で完結。いつでも解約可能。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Q&A -->
+<div class="sec" style="padding-top:0">
+  <p class="sec-h">よくある質問</p>
+  <p class="sec-sub">初めての方からよく寄せられる疑問</p>
+  <div class="qa-list">
+    <div class="qa-card" onclick="toggleQA(this)">
+      <div class="qa-q"><div class="q-icon">Q</div>オンライン処方は安全ですか？</div>
+      <div class="qa-a">国内の正規医療機関によるオンライン診療です。医師が問診・審査を行った上で処方されるため、対面診療と同等の安全性があります。ただし血栓症リスクがある方や一定の喫煙者など、処方できないケースもあります。</div>
+    </div>
+    <div class="qa-card" onclick="toggleQA(this)">
+      <div class="qa-q"><div class="q-icon">Q</div>家族や職場にバレませんか？</div>
+      <div class="qa-a">多くのクリニックが無地の封筒・宅配ボックス対応に対応しています。スマルナ・クリニックフォアは宅配ボックス受け取り可能で、差出人名もクリニック名が分からない表記になっています。</div>
+    </div>
+    <div class="qa-card" onclick="toggleQA(this)">
+      <div class="qa-q"><div class="q-icon">Q</div>保険は使えますか？</div>
+      <div class="qa-a">避妊目的のピルは自由診療（保険適用外）です。月経困難症など治療目的の場合は保険適用になるケースがありますが、オンライン診療では難しいことが多いです。詳細は各クリニックに確認してください。</div>
+    </div>
+    <div class="qa-card" onclick="toggleQA(this)">
+      <div class="qa-q"><div class="q-icon">Q</div>いつでも解約できますか？</div>
+      <div class="qa-a">ほぼすべてのクリニックが縛りなし・いつでも解約可能です。次回発送日の数日前までに手続きすれば翌月から停止できます。解約はアプリまたはWebから完結します。</div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLES -->
+<div style="padding:0 0 8px">
+  <div style="padding:0 16px 12px;display:flex;align-items:center;justify-content:space-between">
+    <p style="font-size:16px;font-weight:700">関連記事</p>
+    <a href="#" style="font-size:12px;color:var(--gr);text-decoration:none">すべて見る</a>
+  </div>
+  <div class="art-scroll">
+    <div class="acard"><div class="acard-img">📖</div><div class="acard-body"><p class="acard-cat">基礎知識</p><p class="acard-h">低用量と中用量の違い。どちらを選ぶか</p><p class="acard-m">6分 · 8,214 views</p></div></div>
+    <div class="acard"><div class="acard-img">😮</div><div class="acard-body"><p class="acard-cat">副作用</p><p class="acard-h">飲み始めの吐き気、いつまで続く？</p><p class="acard-m">4分 · 12,341 views</p></div></div>
+    <div class="acard"><div class="acard-img">💰</div><div class="acard-body"><p class="acard-cat">費用</p><p class="acard-h">年間の実質費用を全クリニックで計算</p><p class="acard-m">5分 · 6,872 views</p></div></div>
+    <div class="acard"><div class="acard-img">🆘</div><div class="acard-body"><p class="acard-cat">アフターピル</p><p class="acard-h">オンラインで処方してもらう方法</p><p class="acard-m">7分 · 15,029 views</p></div></div>
+    <div class="acard"><div class="acard-img">⏰</div><div class="acard-body"><p class="acard-cat">飲み方</p><p class="acard-h">飲み忘れ、何時間以内なら大丈夫？</p><p class="acard-m">3分 · 9,441 views</p></div></div>
+  </div>
+</div>
+
+<!-- BOTTOM CTA -->
+<div class="bottom-cta">
+  <h3>まず1ヶ月、試してみる</h3>
+  <p>スマルナは初診料・送料ともに無料。<br>定期便なら月1,980円〜で始められます。</p>
+  <button class="btn-cta">スマルナの詳細を見る →</button>
+</div>
+
+<div class="disclaimer">
+  【免責事項】本サイトの情報は2026年5月時点のものです。料金・サービス内容は変更される場合があります。医療に関する判断は必ず医師にご相談ください。本サイトはアフィリエイト広告を掲載しています。
+</div>
+
+<footer>
+  <div class="ft-logo">ぴるナビ</div>
+  <p class="ft-desc">オンラインピル処方クリニックを実質費用・速度・サポート品質で徹底比較。14院を実際に調査した情報をお届けします。</p>
+  <div class="ft-links">
+    <a href="#">ランキングTOP5</a>
+    <a href="#">一覧比較表</a>
+    <a href="#">基礎知識</a>
+    <a href="#">よくある質問</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">お問い合わせ</a>
+  </div>
+  <p class="ft-copy">© 2026 ぴるナビ — 本サイトはアフィリエイト広告を利用しています</p>
+</footer>
+
+<div class="sticky-footer">
+  <button class="sf-btn sub">比較表を見る</button>
+  <button class="sf-btn">人気1位を見る →</button>
+</div>
+
+<script>
+function filt(tag,btn){
+  document.querySelectorAll('.fpill').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  let count=0;
+  document.querySelectorAll('.ccard').forEach(c=>{
+    const tags=c.getAttribute('data-tags')||'';
+    const show=tag==='all'||tags.includes(tag);
+    c.style.display=show?'block':'none';
+    if(show)count++;
+  });
+  document.getElementById('count').textContent=count;
+}
+function toggleQA(el){
+  const a=el.querySelector('.qa-a');
+  const isOpen=a.classList.contains('open');
+  document.querySelectorAll('.qa-a').forEach(x=>x.classList.remove('open'));
+  document.querySelectorAll('.qa-card').forEach(x=>x.classList.remove('open'));
+  if(!isOpen){a.classList.add('open');el.classList.add('open')}
+}
+document.querySelectorAll('.ctab').forEach(t=>{
+  t.onclick=function(){
+    document.querySelectorAll('.ctab').forEach(x=>x.classList.remove('on'));
+    this.classList.add('on');
+  }
+});
+</script>
+</body>
+</html>
