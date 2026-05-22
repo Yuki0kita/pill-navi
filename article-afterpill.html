@@ -3,264 +3,558 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy"
-  content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta name="description" content="緊急避妊薬（アフターピル）のオンライン処方手順・費用・72時間以内に対応できるクリニックを解説。">
-<link rel="canonical" href="https://pirunavi.jp/article-afterpill.html">
+<meta name="description" content="アフターピル（緊急避妊薬）は、<strong>性交後72時間以内に服用することで妊娠を防ぐ</str…">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 <title>アフターピルをオンラインで処方してもらう方法と注意点｜ぴるナビ</title>
-<link rel="stylesheet" href="css/tokens.css">
-<link rel="stylesheet" href="css/main.css">
+<style>
+
+/* ── R25スタイル リセット＆ベース ── */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{font-size:16px;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  background:#fff;
+  color:#1a1a1a;
+  font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
+  font-weight:400;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer;font-family:inherit;border:none;background:none}
+
+/* ── ナビ ── */
+.nav{
+  height:56px;border-bottom:1px solid #f0f0f0;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;position:sticky;top:0;z-index:100;background:#fff;
+}
+.nav-logo{font-size:18px;font-weight:900;color:#1a1a1a;letter-spacing:-.02em}
+.nav-logo em{color:#00b894;font-style:normal}
+.nav-links{display:flex;align-items:center;gap:20px}
+.nav-links a{font-size:13px;color:#888;text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:#1a1a1a}
+.nav-cta{
+  background:#1a1a1a;color:#fff;font-size:12px;font-weight:700;
+  padding:9px 18px;border-radius:100px;transition:opacity .15s;
+}
+.nav-cta:hover{opacity:.8}
+
+/* ── パンくず ── */
+.bc{
+  padding:14px 24px;font-size:12px;color:#aaa;
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+  border-bottom:1px solid #f5f5f5;
+}
+.bc a{color:#aaa;transition:color .15s}
+.bc a:hover{color:#1a1a1a}
+
+/* ── 記事ヘッダー ── */
+.art-header{padding:48px 24px 0;max-width:680px;margin:0 auto}
+.art-cat{
+  display:inline-block;
+  font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  color:#00b894;border-bottom:2px solid #00b894;
+  padding-bottom:2px;margin-bottom:20px;
+}
+.art-title{
+  font-size:clamp(24px,5vw,34px);
+  font-weight:900;line-height:1.35;
+  letter-spacing:-.02em;color:#1a1a1a;
+  margin-bottom:20px;
+}
+.art-meta{
+  display:flex;align-items:center;gap:16px;
+  font-size:12px;color:#aaa;margin-bottom:32px;flex-wrap:wrap;
+}
+.art-meta-item{display:flex;align-items:center;gap:5px}
+
+/* ── サムネイル（YouTubeサムネイル風） ── */
+.art-thumb{
+  width:100%;aspect-ratio:16/9;
+  overflow:hidden;margin-bottom:0;
+  display:block;
+}
+.art-thumb svg{width:100%;height:100%;display:block}
+
+/* ── リード文 ── */
+.art-lead{
+  max-width:680px;margin:0 auto;
+  padding:32px 24px 0;
+  font-size:17px;font-weight:500;line-height:2.0;
+  color:#333;border-bottom:1px solid #f0f0f0;padding-bottom:32px;
+}
+
+/* ── 本文エリア ── */
+.art-body{
+  max-width:680px;margin:0 auto;
+  padding:0 24px;
+}
+
+/* ── 見出し ── */
+.art-body h2{
+  font-size:22px;font-weight:900;
+  color:#1a1a1a;line-height:1.4;
+  margin:56px 0 20px;
+  letter-spacing:-.02em;
+  padding-left:14px;
+  border-left:4px solid #00b894;
+}
+.art-body h3{
+  font-size:17px;font-weight:700;
+  color:#1a1a1a;line-height:1.5;
+  margin:36px 0 14px;
+  letter-spacing:-.01em;
+}
+
+/* ── 本文段落 ── */
+.art-body p{
+  font-size:16px;line-height:2.0;
+  color:#333;margin-bottom:24px;
+  letter-spacing:.01em;
+}
+.art-body p strong{
+  font-weight:700;color:#1a1a1a;
+}
+
+/* ── リスト ── */
+.art-body ul,.art-body ol{
+  margin:0 0 24px 0;
+  padding:0;list-style:none;
+  display:flex;flex-direction:column;gap:12px;
+}
+.art-body ul li,.art-body ol li{
+  font-size:16px;line-height:1.85;color:#333;
+  display:flex;gap:12px;align-items:flex-start;
+}
+.art-body ul li::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:#00b894;flex-shrink:0;margin-top:10px;
+}
+.art-body ol{counter-reset:ol}
+.art-body ol li{counter-increment:ol}
+.art-body ol li::before{
+  content:counter(ol);
+  min-width:24px;height:24px;border-radius:50%;
+  background:#1a1a1a;color:#fff;
+  font-size:11px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;margin-top:2px;
+}
+
+/* ── インフォボックス ── */
+.info-box{
+  background:#f6fdf9;border-left:4px solid #00b894;
+  border-radius:0 8px 8px 0;
+  padding:20px 22px;margin:32px 0;
+}
+.info-box .box-label{
+  font-size:11px;font-weight:700;color:#00b894;
+  letter-spacing:.1em;margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.info-box p{font-size:14px;color:#444;line-height:1.9;margin:0}
+
+.warn-box{
+  background:#fff9f0;border-left:4px solid #f0932b;
+  border-radius:0 8px 8px 0;
+  padding:20px 22px;margin:32px 0;
+}
+.warn-box .box-label{
+  font-size:11px;font-weight:700;color:#f0932b;
+  letter-spacing:.1em;margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.warn-box p{font-size:14px;color:#444;line-height:1.9;margin:0}
+
+/* ── テーブル ── */
+.tbl-wrap{overflow-x:auto;margin:32px 0;border-radius:8px;border:1px solid #eee}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:320px;background:#fff}
+thead tr{background:#1a1a1a}
+thead th{
+  padding:13px 16px;color:rgba(255,255,255,.7);
+  font-weight:500;font-size:11px;letter-spacing:.06em;text-align:center;
+}
+thead th:first-child{text-align:left}
+tbody tr{border-bottom:1px solid #f0f0f0;transition:background .1s}
+tbody tr:last-child{border-bottom:none}
+tbody tr:hover{background:#fafafa}
+tbody td{padding:13px 16px;color:#444;text-align:center}
+tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
+.tbl-ok{color:#00b894;font-weight:700}
+.tbl-ng{color:#ccc}
+.tbl-hi td{background:#f6fdf9!important}
+
+/* ── フロー ── */
+.flow{display:flex;flex-direction:column;gap:0;margin:32px 0}
+.flow-item{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:0 0 28px 0;position:relative;
+}
+.flow-item::before{
+  content:'';position:absolute;left:19px;top:40px;
+  width:2px;height:calc(100% - 28px);
+  background:#f0f0f0;
+}
+.flow-item:last-child::before{display:none}
+.flow-num{
+  width:38px;height:38px;border-radius:50%;
+  background:#1a1a1a;color:#fff;
+  font-size:14px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;position:relative;z-index:1;
+}
+.flow-content{padding-top:6px}
+.flow-title{font-size:16px;font-weight:700;color:#1a1a1a;margin-bottom:6px}
+.flow-text{font-size:14px;color:#666;line-height:1.85}
+
+/* ── Q&A ── */
+.qa{display:flex;flex-direction:column;gap:0;margin:32px 0;
+  border:1px solid #f0f0f0;border-radius:12px;overflow:hidden}
+.qa-item{border-bottom:1px solid #f0f0f0}
+.qa-item:last-child{border-bottom:none}
+.qa-q{
+  display:flex;align-items:flex-start;gap:14px;
+  padding:20px;cursor:pointer;transition:background .15s;
+  font-size:15px;font-weight:700;color:#1a1a1a;line-height:1.6;
+  background:#fff;width:100%;text-align:left;
+}
+.qa-q:hover{background:#fafafa}
+.qa-item.open .qa-q{background:#f6fdf9}
+.q-mark{
+  width:26px;height:26px;border-radius:50%;
+  background:#00b894;color:#fff;
+  font-size:13px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.qa-chev{
+  margin-left:auto;flex-shrink:0;
+  color:#ccc;font-size:18px;line-height:1;
+  transition:transform .2s;display:flex;align-items:center;
+}
+.qa-item.open .qa-chev{transform:rotate(180deg)}
+.qa-a{
+  display:none;
+  padding:0 20px 20px 60px;
+  font-size:14px;color:#555;line-height:2;
+}
+.qa-a.open{display:block}
+
+/* ── CTA（記事中） ── */
+.cta-inline{
+  background:#1a1a1a;border-radius:12px;
+  padding:32px 24px;margin:48px 0;text-align:center;
+}
+.cta-inline h3{
+  font-size:19px;font-weight:900;color:#fff;
+  margin-bottom:8px;letter-spacing:-.01em;
+}
+.cta-inline p{
+  font-size:13px;color:rgba(255,255,255,.55);
+  margin-bottom:20px;line-height:1.85;
+}
+.cta-btn{
+  display:inline-block;
+  background:#00b894;color:#fff;
+  font-size:15px;font-weight:700;
+  padding:14px 36px;border-radius:100px;
+  transition:opacity .15s;border:none;cursor:pointer;font-family:inherit;
+}
+.cta-btn:hover{opacity:.88}
+
+/* ── 関連記事 ── */
+.related{padding:48px 0 24px}
+.related-title{
+  font-size:13px;font-weight:700;color:#aaa;letter-spacing:.08em;
+  text-transform:uppercase;padding:0 24px;margin-bottom:16px;
+}
+.related-scroll{
+  display:flex;gap:12px;overflow-x:auto;padding:0 24px 4px;
+  -webkit-overflow-scrolling:touch;scrollbar-width:none;
+}
+.related-scroll::-webkit-scrollbar{display:none}
+.rel-card{
+  background:#fff;border:1px solid #f0f0f0;border-radius:10px;
+  overflow:hidden;flex-shrink:0;width:200px;cursor:pointer;
+  transition:box-shadow .15s;
+}
+.rel-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.rel-img{
+  height:90px;display:flex;align-items:center;justify-content:center;
+  font-size:28px;background:#f5f5f5;
+}
+.rel-body{padding:10px 12px}
+.rel-cat{font-size:10px;color:#00b894;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.rel-h{font-size:12px;font-weight:600;line-height:1.6;color:#1a1a1a}
+
+/* ── Disclaimer ── */
+.disclaimer{
+  border-top:1px solid #f0f0f0;
+  padding:20px 24px;font-size:11px;color:#bbb;line-height:2;
+  max-width:680px;margin:0 auto;
+}
+
+/* ── フッター ── */
+.footer{background:#1a1a1a;padding:40px 24px 28px;margin-top:64px}
+.footer-logo{font-size:18px;font-weight:900;color:#fff;letter-spacing:-.02em;margin-bottom:8px}
+.footer-logo em{color:#00b894;font-style:normal}
+.footer-desc{font-size:12px;color:rgba(255,255,255,.3);line-height:2;margin-bottom:20px}
+.footer-links{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:20px}
+.footer-links a{font-size:12px;color:rgba(255,255,255,.3)}
+.footer-links a:hover{color:rgba(255,255,255,.7)}
+.footer-copy{font-size:11px;color:rgba(255,255,255,.15);border-top:1px solid rgba(255,255,255,.06);padding-top:16px}
+
+/* ── スティッキーフッター ── */
+.sf{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:#fff;border-top:1px solid #f0f0f0;
+  padding:10px 16px;display:flex;gap:10px;
+}
+.sf-main{
+  flex:2;background:#1a1a1a;color:#fff;
+  font-size:14px;font-weight:700;border-radius:100px;
+  border:none;cursor:pointer;font-family:inherit;
+  padding:13px 0;transition:opacity .15s;
+}
+.sf-main:hover{opacity:.85}
+.sf-sub{
+  flex:1;background:#fff;color:#1a1a1a;
+  font-size:13px;font-weight:700;border-radius:100px;
+  border:1.5px solid #e0e0e0;cursor:pointer;
+  font-family:inherit;padding:12px 0;transition:background .15s;
+}
+.sf-sub:hover{background:#f5f5f5}
+
+/* ── シェアボタン ── */
+.share-bar{
+  display:flex;gap:10px;flex-wrap:wrap;
+  padding:32px 0;border-top:1px solid #f0f0f0;border-bottom:1px solid #f0f0f0;
+  margin:48px 0 0;
+}
+.share-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:700;padding:10px 18px;
+  border-radius:100px;border:none;cursor:pointer;transition:opacity .15s;
+}
+.share-btn:hover{opacity:.85}
+.share-x{background:#000;color:#fff}
+.share-line{background:#06C755;color:#fff}
+
+/* ── 目次 ── */
+.toc{
+  background:#fafafa;border:1px solid #f0f0f0;border-radius:10px;
+  padding:20px 22px;margin:32px 0;
+}
+.toc-title{font-size:12px;font-weight:700;color:#aaa;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+.toc-list li{font-size:14px;color:#555;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.toc-list li::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:#00b894;flex-shrink:0;margin-top:7px;
+}
+.toc-list a{color:#555;border-bottom:1px solid transparent;transition:border-color .15s}
+.toc-list a:hover{border-bottom-color:#00b894;color:#00b894}
+
+body{padding-bottom:72px}
+@media(min-width:680px){
+  .art-header,.art-body,.art-lead,.disclaimer{padding-left:32px;padding-right:32px}
+  .related-scroll,.related-title{padding-left:32px;padding-right:32px}
+  .bc,.nav,.sf{padding-left:32px;padding-right:32px}
+}
+
+</style>
 </head>
 <body><nav class="nav">
-  <a href="index.html" class="nav__logo">ぴるナビ<span class="nav__logo-sub">クリニック比較</span></a>
-  <div class="nav__links">
-    <a href="index.html" class="nav__link">ランキング</a>
-    <a href="article-basic.html" class="nav__link">基礎知識</a>
-    <a href="article-cost.html" class="nav__link">費用比較</a>
-    <button class="nav__btn" onclick="location.href='index.html'">無料で始める</button>
+  <a href="index.html" class="nav-logo">ぴる<em>ナビ</em></a>
+  <div class="nav-links">
+    <a href="index.html">ランキング</a>
+    <a href="article-basic.html">基礎知識</a>
+    <a href="article-cost.html">費用比較</a>
+    <a href="index.html" class="nav-cta">クリニックを探す</a>
   </div>
 </nav>
-<div class="breadcrumb">
-  <a href="index.html" class="breadcrumb__link">ホーム</a>
-  <span class="breadcrumb__sep">›</span>
-  <span>アフターピル</span>
-</div>
-<div class="article-hero">
-  <p class="article-hero__cat">アフターピル</p>
-  <h1 class="article-hero__title">アフターピルを<br>オンラインで処方してもらう<br>方法と注意点</h1>
-  <div class="article-hero__meta">
-    <span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span> 2026年5月更新</span>
-    <span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> 5分で読める</span>
-    <span><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span> 23,029 views</span>
+<div class="bc"><a href="index.html">ホーム</a><span>›</span><span>アフターピル</span></div>
+<header class="art-header">
+  <p class="art-cat">アフターピル</p>
+  <h1 class="art-title">アフターピルをオンラインで<br>処方してもらう方法と注意点</h1>
+  <div class="art-meta">
+    <span class="art-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2026年5月更新</span>
+    <span class="art-meta-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>5分で読める</span>
   </div>
-<div class="article-eyecatch--svg" style="width:100%;height:260px;border-radius:14px;overflow:hidden;margin:20px 0;display:block">
-<svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+</header>
+<div class="art-thumb">
+<svg viewBox="0 0 960 540" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
   <defs>
-    <linearGradient id="b3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#100808"/>
-      <stop offset="100%" stop-color="#1e0f0f"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140606"/>
+      <stop offset="100%" stop-color="#221010"/>
     </linearGradient>
-    <linearGradient id="urgent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="urg" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ff4757"/>
       <stop offset="100%" stop-color="#ff6348"/>
     </linearGradient>
-    <filter id="urgentglow">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="shadow3">
-      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.7"/>
-    </filter>
+    <filter id="glow"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="sd"><feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.7"/></filter>
   </defs>
-
-  <rect width="680" height="260" fill="url(#b3)"/>
-  <!-- 赤い光 -->
-  <ellipse cx="680" cy="0" rx="250" ry="200" fill="#ff4757" opacity="0.1" filter="url(#urgentglow)"/>
-  <ellipse cx="340" cy="130" rx="300" ry="100" fill="#ff4757" opacity="0.04"/>
-
-  <!-- 右側：時計カウントダウン風 -->
-  <!-- 外枠 -->
-  <circle cx="570" cy="130" r="88" fill="rgba(255,71,87,0.08)" stroke="rgba(255,71,87,0.25)" stroke-width="1.5"/>
-  <circle cx="570" cy="130" r="72" fill="rgba(255,71,87,0.06)" stroke="rgba(255,71,87,0.15)" stroke-width="1"/>
-  <!-- 72h アーク -->
-  <circle cx="570" cy="130" r="80" fill="none" stroke="#ff4757" stroke-width="6"
-    stroke-dasharray="502" stroke-dashoffset="126" stroke-linecap="round"
-    transform="rotate(-90 570 130)" opacity="0.8"/>
-  <!-- 24h マーカー -->
-  <circle cx="570" cy="50" r="6" fill="#ff4757"/>
-  <!-- 数値 -->
-  <text x="570" y="115" text-anchor="middle" font-size="36" font-weight="900"
-    font-family="sans-serif" fill="white" filter="url(#shadow3)">72</text>
-  <text x="570" y="145" text-anchor="middle" font-size="16" font-weight="700"
-    font-family="sans-serif" fill="#ff4757">時間以内</text>
-  <text x="570" y="168" text-anchor="middle" font-size="11"
-    font-family="sans-serif" fill="rgba(255,255,255,0.5)">効果：最大 95%</text>
-
-  <!-- 目盛り -->
-  <text x="490" y="48" font-size="10" fill="rgba(255,255,255,0.4)" font-family="sans-serif">24h</text>
-  <text x="636" y="134" font-size="10" fill="rgba(255,255,255,0.4)" font-family="sans-serif">48h</text>
-  <text x="518" y="218" font-size="10" fill="rgba(255,255,255,0.4)" font-family="sans-serif">72h</text>
-
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <ellipse cx="960" cy="0" rx="380" ry="280" fill="#ff4757" opacity="0.1" filter="url(#glow)"/>
+  <!-- 右：カウントダウン時計 -->
+  <circle cx="740" cy="280" r="180" fill="rgba(255,71,87,0.06)" stroke="rgba(255,71,87,0.2)" stroke-width="2"/>
+  <circle cx="740" cy="280" r="152" fill="rgba(20,6,6,0.8)"/>
+  <!-- プログレスアーク（72h分 = 80%） -->
+  <circle cx="740" cy="280" r="165" fill="none" stroke="#ff4757" stroke-width="10"
+    stroke-dasharray="1037" stroke-dashoffset="200" stroke-linecap="round"
+    transform="rotate(-90 740 280)" opacity="0.85"/>
+  <!-- 刻み -->
+  <line x1="740" y1="100" x2="740" y2="120" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="920" y1="280" x2="900" y2="280" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round"/>
+  <line x1="740" y1="460" x2="740" y2="440" stroke="rgba(255,255,255,0.3)" stroke-width="3" stroke-linecap="round"/>
+  <!-- 中央テキスト -->
+  <text x="740" y="248" text-anchor="middle" font-size="72" font-weight="900"
+    font-family="sans-serif" fill="white" filter="url(#sd)">72</text>
+  <text x="740" y="296" text-anchor="middle" font-size="24" font-weight="700"
+    font-family="Noto Sans JP,sans-serif" fill="#ff4757">時間以内</text>
+  <text x="740" y="336" text-anchor="middle" font-size="16"
+    font-family="Noto Sans JP,sans-serif" fill="rgba(255,255,255,0.45)">最大効果 95%</text>
+  <!-- 目盛りラベル -->
+  <text x="740" y="92" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.4)" font-family="sans-serif">0h（性交直後）</text>
+  <text x="930" y="285" font-size="12" fill="rgba(255,255,255,0.35)" font-family="sans-serif">48h</text>
+  <text x="660" y="475" font-size="12" fill="rgba(255,255,255,0.35)" font-family="sans-serif">72h →効果58%</text>
   <!-- カテゴリ -->
-  <rect x="28" y="28" width="140" height="28" rx="14" fill="url(#urgent)"/>
-  <text x="98" y="48" text-anchor="middle" font-size="12" font-weight="800"
-    font-family="sans-serif" fill="white" letter-spacing="1">緊急｜アフターピル</text>
-
-  <!-- 大テキスト -->
-  <text x="28" y="115" font-size="52" font-weight="900"
-    font-family="Noto Sans JP,sans-serif" fill="white" filter="url(#shadow3)">時間との</text>
-  <text x="28" y="172" font-size="52" font-weight="900"
-    font-family="Noto Sans JP,sans-serif" fill="url(#urgent)" filter="url(#urgentglow)">勝負です</text>
-
-  <text x="28" y="204" font-size="13" font-weight="700"
-    font-family="sans-serif" fill="rgba(255,255,255,0.6)">オンラインで最短当日処方が可能</text>
-
-  <!-- 警告ライン -->
-  <rect x="28" y="218" width="180" height="26" rx="4" fill="rgba(255,71,87,0.2)"
-    stroke="#ff4757" stroke-width="1.5"/>
-  <text x="118" y="236" text-anchor="middle" font-size="12" font-weight="800"
-    font-family="sans-serif" fill="#ff6b6b">今すぐ処方を受ける</text>
+  <rect x="50" y="52" width="196" height="34" rx="17" fill="url(#urg)"/>
+  <text x="148" y="75" text-anchor="middle" font-size="14" font-weight="800"
+    font-family="Noto Sans JP,sans-serif" fill="white" letter-spacing="1">緊急｜アフターピル</text>
+  <!-- メインテキスト -->
+  <text x="50" y="212" font-size="78" font-weight="900" fill="white"
+    font-family="Noto Sans JP,sans-serif" filter="url(#sd)" letter-spacing="-2">時間との</text>
+  <text x="50" y="304" font-size="78" font-weight="900"
+    font-family="Noto Sans JP,sans-serif" fill="url(#urg)" filter="url(#glow)" letter-spacing="-2">勝負です</text>
+  <text x="50" y="356" font-size="19" fill="rgba(255,255,255,0.55)"
+    font-family="Noto Sans JP,sans-serif">オンラインで最短当日処方が可能</text>
+  <rect x="50" y="400" width="280" height="48" rx="8" fill="rgba(255,71,87,0.18)" stroke="#ff4757" stroke-width="1.5"/>
+  <text x="190" y="430" text-anchor="middle" font-size="16" font-weight="800"
+    font-family="Noto Sans JP,sans-serif" fill="#ff6b6b">今すぐ処方を受ける</text>
 </svg>
 </div>
-</div>
-
-<article class="article-body">
-
-<p>アフターピル（緊急避妊薬）は、<strong>性交後72時間以内に服用することで妊娠を防ぐ</strong>ための薬です。時間が経つほど効果が下がるため、できるだけ早く入手することが重要です。</p>
-
-<div class="warn-box">
-  <div class="warn-box__label"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span> 最重要：時間との勝負です</div>
-  <p>性交後<strong>72時間以内</strong>（できれば24時間以内）の服用が推奨されます。時間が経つにつれて避妊効果が低下します。24時間以内：約95%　/　25〜48時間：約85%　/　49〜72時間：約58%</p>
-</div>
-
+<div class="art-lead">アフターピル（緊急避妊薬）は、<strong>性交後72時間以内に服用することで妊娠を防ぐ</strong>薬です。時間が経つほど効果が下がるため、できるだけ早く入手することが重要です。</div>
+<div class="art-body">
+<div class="warn-box"><p class="box-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>最重要：時間との勝負です</p><p>性交後<strong>72時間以内</strong>（できれば24時間以内）の服用が推奨されます。24時間以内：約95% ／ 25〜48時間：約85% ／ 49〜72時間：約58%</p></div>
 <h2>オンラインで処方してもらえるの？</h2>
-<p>はい、対応しているクリニックであれば<strong>オンライン診療でアフターピルの処方が可能</strong>です。ただしすべてのオンラインクリニックが対応しているわけではありません。</p>
-<p>アフターピルに対応しているクリニックとして、<strong>クリニックフォア</strong>が最短当日処方・翌日配送に対応しており、緊急時に最も頼れます。</p>
-
+<p>はい、対応しているクリニックであればオンライン診療でアフターピルの処方が可能です。<strong>クリニックフォア</strong>が最短当日処方・翌日配送に対応しており、緊急時に最も頼れます。</p>
 <h2>オンライン処方の手順</h2>
 <div class="flow">
-  <div class="flow__item">
-    <div class="flow__num">1</div>
-    <div><div class="flow__title">クリニックのサイトにアクセス</div><p class="flow__text">クリニックフォアなど対応クリニックのWebサイトまたはアプリから「アフターピル」を選択。深夜でも受け付けているクリニックが多い。</p></div>
-  </div>
-  <div class="flow__item">
-    <div class="flow__num">2</div>
-    <div><div class="flow__title">オンライン問診</div><p class="flow__text">性交の日時・最後の生理開始日・既往症などを入力。約5分で完了。</p></div>
-  </div>
-  <div class="flow__item">
-    <div class="flow__num">3</div>
-    <div><div class="flow__title">医師が処方・即日発送</div><p class="flow__text">問診後すぐに医師が審査。処方が下りたら最短当日発送。翌日午前中到着も可能なクリニックあり。</p></div>
-  </div>
-  <div class="flow__item">
-    <div class="flow__num">4</div>
-    <div><div class="flow__title">服用・経過観察</div><p class="flow__text">届いたらすぐに服用。服用後1〜2日で出血や吐き気が起きることがあるが正常。次の生理が遅れる場合も多い。</p></div>
-  </div>
+  <div class="flow-item"><div class="flow-num">1</div><div class="flow-content"><div class="flow-title">クリニックのサイトにアクセス</div><p class="flow-text">クリニックフォアなど対応クリニックのWebサイトから「アフターピル」を選択。深夜でも受け付けているクリニックが多い。</p></div></div>
+  <div class="flow-item"><div class="flow-num">2</div><div class="flow-content"><div class="flow-title">オンライン問診（約5分）</div><p class="flow-text">性交の日時・最後の生理開始日・既往症などを入力。約5分で完了。</p></div></div>
+  <div class="flow-item"><div class="flow-num">3</div><div class="flow-content"><div class="flow-title">医師が処方・即日発送</div><p class="flow-text">問診後すぐに医師が審査。処方が下りたら最短当日発送。翌日午前中到着も可能。</p></div></div>
+  <div class="flow-item"><div class="flow-num">4</div><div class="flow-content"><div class="flow-title">服用・経過観察</div><p class="flow-text">届いたらすぐに服用。服用後1〜2日で出血や吐き気が起きることがあるが正常。次の生理が遅れる場合も多い。</p></div></div>
 </div>
-
 <h2>費用の目安</h2>
-<p>アフターピルは保険適用外（自由診療）のため全額自己負担です。オンラインでの費用目安は下記の通りです。</p>
+<p>アフターピルは保険適用外（自由診療）のため全額自己負担です。</p>
 <ul>
   <li>クリニックフォア：7,000〜10,000円（診察料込み）</li>
   <li>スマルナ：7,000〜10,000円（対応している場合）</li>
   <li>対面の婦人科：8,000〜15,000円</li>
 </ul>
-<p>オンラインの方が対面より安く、かつ時間を選ばない点が大きなメリットです。</p>
-
-
-<div style="margin:0 var(--sp-5) var(--sp-6);background:var(--clr-brand);border-radius:var(--r-lg);padding:var(--sp-6) var(--sp-5);text-align:center">
-  <h2 style="font-size:18px;font-weight:700;color:#fff;margin-bottom:var(--sp-2)">まず1ヶ月、試してみる</h2>
-  <p style="font-size:12px;color:rgba(255,255,255,.72);margin-bottom:var(--sp-5);line-height:1.9">クリニックフォアは初診料・送料ともに無料。<br>定期便なら月1,980円〜で始められます。</p>
-  <button onclick="location.href='index.html'" style="display:block;width:100%;background:#fff;color:var(--clr-brand);font-size:15px;font-weight:700;border:none;padding:15px;border-radius:var(--r-full);cursor:pointer;font-family:inherit">クリニックフォアの詳細を見る <span class="icon" style="display:inline-flex;vertical-align:middle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></button>
+<p>オンラインの方が対面より安く、時間を選ばない点が大きなメリットです。</p>
+<div class="cta-inline">
+  <h3>アフターピル対応クリニックを見る</h3>
+  <p>72時間以内が勝負。クリニックフォアは最短当日処方に対応しています。</p>
+  <button class="cta-btn" onclick="location.href='index.html'">スマルナの詳細を見る →</button>
 </div>
-<div data-accordion style="margin:var(--sp-5) 0">
-  <div class="accordion__item" data-accordion-item>
-    <button class="accordion__trigger" data-accordion-trigger aria-expanded="false">
-      <span class="accordion__icon">Q</span>
-      72時間を過ぎたら効果はないですか？
-      <span class="accordion__chev"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></span>
-    </button>
-    <div class="accordion__body" data-accordion-body>
-      <div class="accordion__content">72時間を超えると効果が大幅に落ちますが、120時間（5日）以内であれば銅付加IUD（子宮内避妊器具）という選択肢があります。これは婦人科で処置してもらう必要があります。いずれにせよ早急に医師に相談することをお勧めします。</div>
-    </div>
+<div class="qa" data-accordion><div class="qa-item" data-accordion-item>
+  <button class="qa-q" data-accordion-trigger aria-expanded="false">
+    <span class="q-mark">Q</span>72時間を過ぎたら効果はないですか？
+    <span class="qa-chev">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
+  </button>
+  <div class="qa-body" data-accordion-body style="overflow:hidden;height:0;transition:height 0.24s cubic-bezier(0.16,1,0.3,1)">
+    <div style="padding:0 20px 20px 60px;font-size:14px;color:#555;line-height:2">72時間を超えると効果が大幅に落ちますが、120時間（5日）以内であれば銅付加IUD（子宮内避妊器具）という選択肢があります。これは婦人科で処置してもらう必要があります。</div>
   </div>
-  <div class="accordion__item" data-accordion-item>
-    <button class="accordion__trigger" data-accordion-trigger aria-expanded="false">
-      <span class="accordion__icon">Q</span>
-      アフターピルを飲んだ後の次の生理はいつ来ますか？
-      <span class="accordion__chev"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></span>
-    </button>
-    <div class="accordion__body" data-accordion-body>
-      <div class="accordion__content">服用後1〜3週間以内に消退出血（出血）があることが多く、その後次の生理は通常の周期より1〜2週間遅れることが一般的です。3週間以上生理が来ない場合は妊娠検査薬での確認をお勧めします。</div>
-    </div>
+</div><div class="qa-item" data-accordion-item>
+  <button class="qa-q" data-accordion-trigger aria-expanded="false">
+    <span class="q-mark">Q</span>アフターピルを飲んだ後の次の生理はいつ来ますか？
+    <span class="qa-chev">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+    </span>
+  </button>
+  <div class="qa-body" data-accordion-body style="overflow:hidden;height:0;transition:height 0.24s cubic-bezier(0.16,1,0.3,1)">
+    <div style="padding:0 20px 20px 60px;font-size:14px;color:#555;line-height:2">服用後1〜3週間以内に消退出血があることが多く、その後次の生理は通常の周期より1〜2週間遅れることが一般的です。3週間以上生理が来ない場合は妊娠検査薬での確認をお勧めします。</div>
   </div>
-  <div class="accordion__item" data-accordion-item>
-    <button class="accordion__trigger" data-accordion-trigger aria-expanded="false">
-      <span class="accordion__icon">Q</span>
-      アフターピルを繰り返し使うのは問題ありますか？
-      <span class="accordion__chev"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span></span>
-    </button>
-    <div class="accordion__body" data-accordion-body>
-      <div class="accordion__content">アフターピルは緊急時の手段として設計されており、定期的な避妊手段としての使用は推奨されません。定期的な避妊を希望する場合は、低用量ピルの継続服用やIUDの検討をお勧めします。</div>
-    </div>
-  </div>
+</div></div>
+<div class="share-bar">
+  <button class="share-btn share-x" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href))">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    X でシェア
+  </button>
+  <button class="share-btn share-line" onclick="window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(location.href))">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.063-.021.13-.032.199-.032.211 0 .391.09.51.25l2.444 3.317V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    LINE でシェア
+  </button>
 </div>
-</article>
-<section style="padding:0 0 var(--sp-6)">
-  <div style="padding:var(--sp-4) var(--sp-5) var(--sp-3);display:flex;align-items:center;justify-content:space-between">
-    <h2 style="font-size:17px;font-weight:700">関連記事</h2>
-    <a href="article-basic.html" style="font-size:12px;color:var(--clr-brand);font-weight:500">すべて見る <span class="icon" style="display:inline-flex;vertical-align:middle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></a>
-  </div>
-  <div style="display:flex;gap:10px;overflow-x:auto;padding:0 var(--sp-5) var(--sp-1);-webkit-overflow-scrolling:touch;scrollbar-width:none">
-    
-    <div class="art-card" onclick="location.href='article-basic.html'">
-      <div class="art-card__img" style="background:#e6f7f3"><span class="icon" style="font-size:32px"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></span></div>
-      <div class="art-card__body">
-        <p class="art-card__cat">基礎知識</p>
-        <p class="art-card__title">低用量ピルとは？効果・種類・選び方</p>
-        <p class="art-card__meta">8分 · 14,821 views</p>
-      </div>
-    </div>
-    <div class="art-card" onclick="location.href='article-side-effects.html'">
-      <div class="art-card__img" style="background:#fef3e2"><span class="icon" style="font-size:32px"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span></div>
-      <div class="art-card__body">
-        <p class="art-card__cat">副作用</p>
-        <p class="art-card__title">飲み始めの吐き気はいつまで？副作用と対処法</p>
-        <p class="art-card__meta">6分 · 19,341 views</p>
-      </div>
-    </div>
-    <div class="art-card" onclick="location.href='article-cost.html'">
-      <div class="art-card__img" style="background:#f0f0fe"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span></div>
-      <div class="art-card__body">
-        <p class="art-card__cat">費用比較</p>
-        <p class="art-card__title">年間の実質費用を全クリニックで計算</p>
-        <p class="art-card__meta">7分 · 11,872 views</p>
-      </div>
-    </div>
-    <div class="art-card" onclick="location.href='article-forget.html'">
-      <div class="art-card__img" style="background:#fff0e6"><span class="icon" style="font-size:32px"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span></div>
-      <div class="art-card__body">
-        <p class="art-card__cat">飲み方</p>
-        <p class="art-card__title">飲み忘れたら？何時間以内なら大丈夫か</p>
-        <p class="art-card__meta">4分 · 17,441 views</p>
-      </div>
-    </div>
-    <div class="art-card" onclick="location.href='article-pms.html'">
-      <div class="art-card__img" style="background:#f3e6ff"><span class="icon" style="font-size:32px"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span></div>
-      <div class="art-card__body">
-        <p class="art-card__cat">PMS・月経</p>
-        <p class="art-card__title">PMSにピルは効く？月経前症候群との関係</p>
-        <p class="art-card__meta">9分 · 8,103 views</p>
-      </div>
-    </div>
-  </div>
-</section><div class="disclaimer">
-  【広告・免責事項】本サイトはアフィリエイト広告を掲載しています。掲載情報は2026年5月時点のものです。料金・サービス内容は変更される場合があります。医療に関する判断は必ず医師にご相談ください。
+</div>
+<div class="related">
+  <p class="related-title">Related Articles</p>
+  <div class="related-scroll"><div class="rel-card" onclick="location.href='article-basic.html'"><div class="rel-img" style="background:#e6f7f3"></div><div class="rel-body"><p class="rel-cat">基礎知識</p><p class="rel-h">低用量ピルとは？効果・種類・選び方</p></div></div><div class="rel-card" onclick="location.href='article-side-effects.html'"><div class="rel-img" style="background:#fff4ee"></div><div class="rel-body"><p class="rel-cat">副作用</p><p class="rel-h">飲み始めの吐き気はいつまで？</p></div></div><div class="rel-card" onclick="location.href='article-cost.html'"><div class="rel-img" style="background:#f0f0ff"></div><div class="rel-body"><p class="rel-cat">費用比較</p><p class="rel-h">年間の実質費用を全クリニックで計算</p></div></div><div class="rel-card" onclick="location.href='article-forget.html'"><div class="rel-img" style="background:#fffaee"></div><div class="rel-body"><p class="rel-cat">飲み方</p><p class="rel-h">飲み忘れたら？何時間以内なら大丈夫</p></div></div><div class="rel-card" onclick="location.href='article-pms.html'"><div class="rel-img" style="background:#f8f0ff"></div><div class="rel-body"><p class="rel-cat">PMS・月経</p><p class="rel-h">PMSにピルは効く？月経との関係</p></div></div></div>
+</div>
+<div class="disclaimer">
+  【広告・免責事項】本サイトはアフィリエイト広告を掲載しています。掲載情報は2026年5月時点のものです。料金・サービス内容は変更される場合があります。医療に関する判断は必ず医師にご相談ください。本サイトは医療機関ではありません。
 </div>
 <footer class="footer">
-  <div class="footer__logo">ぴるナビ</div>
-  <p class="footer__desc">オンラインピル処方クリニックを実質費用・配送速度・サポートの3軸で徹底比較。14院を実際に調査した情報をお届けします。</p>
-  <div class="footer__links">
-    <a href="index.html" class="footer__link">ランキングTOP5</a>
-    <a href="detail-smalna.html" class="footer__link">スマルナ詳細</a>
-    <a href="article-basic.html" class="footer__link">基礎知識</a>
-    <a href="article-cost.html" class="footer__link">費用比較</a>
-    <a href="article-side-effects.html" class="footer__link">副作用と対処法</a>
-    <a href="article-afterpill.html" class="footer__link">アフターピル</a>
-    <a href="article-forget.html" class="footer__link">飲み忘れ対処法</a>
-    <a href="article-pms.html" class="footer__link">PMS・月経困難</a>
-    <a href="#" class="footer__link">プライバシーポリシー</a>
-    <a href="#" class="footer__link">お問い合わせ</a>
+  <div class="footer-logo">ぴる<em>ナビ</em></div>
+  <p class="footer-desc">オンラインピル処方クリニックを実質費用・配送速度・サポートの3軸で徹底比較。14院を実際に調査した情報をお届けします。</p>
+  <div class="footer-links">
+    <a href="index.html">ランキングTOP5</a>
+    <a href="detail-smalna.html">スマルナ詳細</a>
+    <a href="article-basic.html">基礎知識</a>
+    <a href="article-cost.html">費用比較</a>
+    <a href="article-side-effects.html">副作用</a>
+    <a href="article-afterpill.html">アフターピル</a>
+    <a href="article-forget.html">飲み忘れ</a>
+    <a href="article-pms.html">PMS・月経</a>
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">お問い合わせ</a>
   </div>
-  <p class="footer__copy">© 2026 ぴるナビ <span class="icon" style="color:var(--clr-ink-4)"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></span> 本サイトはアフィリエイト広告を利用しています</p>
+  <p class="footer-copy">© 2026 ぴるナビ — 本サイトはアフィリエイト広告を利用しています</p>
 </footer>
-<script src="js/pirunavi.js" defer></script>
-</body>
-</html><div class="sticky-footer">
-  <button class="sticky-footer__sub" onclick="location.href='index.html'">ランキングに戻る</button>
-  <button class="sticky-footer__main" onclick="location.href='index.html'">アフターピル対応クリニックを見る <span class="icon" style="display:inline-flex;vertical-align:middle"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span></button>
+<div class="sf">
+  <button class="sf-sub" onclick="location.href='index.html'">ランキングに戻る</button>
+  <button class="sf-main" onclick="location.href='detail-smalna.html'">人気1位のクリニックを見る →</button>
 </div>
+<script>
+'use strict';
+// アコーディオン
+document.querySelectorAll('[data-accordion]').forEach(root => {
+  root.querySelectorAll('[data-accordion-item]').forEach(item => {
+    const trigger = item.querySelector('[data-accordion-trigger]');
+    const body    = item.querySelector('[data-accordion-body]');
+    if (!trigger || !body) return;
+    trigger.addEventListener('click', () => {
+      const open = trigger.getAttribute('aria-expanded') === 'true';
+      root.querySelectorAll('[data-accordion-trigger]').forEach(t => t.setAttribute('aria-expanded','false'));
+      root.querySelectorAll('[data-accordion-item]').forEach(i => i.classList.remove('open'));
+      root.querySelectorAll('[data-accordion-body]').forEach(b => { b.style.height = '0'; });
+      if (!open) {
+        trigger.setAttribute('aria-expanded','true');
+        item.classList.add('open');
+        body.style.height = body.scrollHeight + 'px';
+        body.addEventListener('transitionend', () => { if(item.classList.contains('open')) body.style.height = 'auto'; }, {once:true});
+      }
+    });
+  });
+});
+// スムーススクロール
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const t = document.getElementById(a.getAttribute('href').slice(1));
+    if (!t) return; e.preventDefault();
+    window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:'smooth'});
+  });
+});
+</script>
+</body></html>
