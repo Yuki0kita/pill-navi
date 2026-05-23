@@ -5,215 +5,147 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta name="description" content="A8.netで確認したプログラム情報をもとに、オンラインピル処方クリニックを比較。メデリピル・マイピル・ルナルナ・レバクリ・エミシアを掲載。">
+<meta name="description" content="ピルのオンライン処方クリニックを比較。かんたん診断であなたに合ったクリニックが分かります。メデリピル・マイピル・ルナルナ・レバクリ・エミシアクリニックを掲載。">
+<!-- Google Analytics -->
+<!-- TODO: Googleアナリティクスのトラッキングコードをここに貼る -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<title>オンラインピル処方クリニック比較ランキング｜ぴるナビ</title>
+<title>オンラインピル処方クリニック比較・診断｜ぴるナビ</title>
 <style>
-
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{background:#f7f7f5;color:#1a1a1a;
   font-family:'Noto Sans JP','Hiragino Kaku Gothic ProN',sans-serif;
-  font-size:14px;line-height:1.85;-webkit-font-smoothing:antialiased;
+  font-size:15px;line-height:1.9;-webkit-font-smoothing:antialiased;
   overflow-x:hidden;padding-bottom:72px}
 a{color:inherit;text-decoration:none}
 button{cursor:pointer;font-family:inherit;border:none;background:none}
+img{max-width:100%;display:block}
 
 /* NAV */
 .nav{height:56px;background:#fff;border-bottom:1px solid #ebebeb;
   display:flex;align-items:center;justify-content:space-between;
   padding:0 20px;position:sticky;top:0;z-index:100}
-.nav-logo{font-size:18px;font-weight:900;letter-spacing:-.02em}
+.nav-logo{font-size:18px;font-weight:900;letter-spacing:-.02em;color:#1a1a1a}
 .nav-logo em{color:#00b894;font-style:normal}
 .nav-r{display:flex;align-items:center;gap:14px}
-.nav-r a{font-size:12px;color:#999}
+.nav-r a{font-size:12px;color:#999;transition:color .15s}
 .nav-r a:hover{color:#1a1a1a}
 .nav-cta{background:#1a1a1a;color:#fff!important;font-size:12px;font-weight:700;
   padding:8px 16px;border-radius:100px}
 
 /* BREADCRUMB */
-.bc{padding:12px 20px;font-size:12px;color:#aaa;border-bottom:1px solid #f0f0f0;
-  background:#fff;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
-.bc a{color:#aaa}
+.bc{padding:11px 20px;font-size:12px;color:#bbb;border-bottom:1px solid #f0f0f0;
+  background:#fff;display:flex;gap:6px;flex-wrap:wrap}
+.bc a{color:#bbb;transition:color .15s}
 .bc a:hover{color:#1a1a1a}
 
-/* HERO */
-.hero{background:#fff;padding:32px 20px 28px;border-bottom:1px solid #f0f0f0}
-.hero-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-  color:#00b894;margin-bottom:10px}
-.hero h1{font-size:clamp(22px,5vw,30px);font-weight:900;line-height:1.3;
-  margin-bottom:10px;letter-spacing:-.02em}
-.hero-sub{font-size:13px;color:#777;line-height:1.85;margin-bottom:20px}
-.hero-ad-notice{
-  background:#fffdf0;border:1px solid #f0d060;border-radius:8px;
-  padding:11px 14px;font-size:12px;color:#7a6200;line-height:1.75;
-  display:flex;gap:8px;align-items:flex-start;
-}
+/* 記事レイアウト */
+.art-hero{background:#fff;border-bottom:1px solid #f0f0f0}
+.art-hero-inner{max-width:680px;margin:0 auto;padding:32px 20px 0}
+.art-cat{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#00b894;margin-bottom:12px;display:block}
+.art-title{font-size:clamp(22px,5vw,32px);font-weight:900;line-height:1.35;
+  color:#1a1a1a;margin-bottom:16px;letter-spacing:-.02em}
+.art-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:#aaa;
+  flex-wrap:wrap;padding-bottom:20px;border-bottom:1px solid #f0f0f0}
+.art-meta span{display:flex;align-items:center;gap:4px}
 
-/* FILTER */
-.filter-bar{display:flex;gap:8px;overflow-x:auto;padding:12px 20px;
-  background:#fff;border-bottom:1px solid #ebebeb;-webkit-overflow-scrolling:touch}
-.filter-bar::-webkit-scrollbar{display:none}
-.fp{display:inline-flex;align-items:center;gap:4px;font-size:12px;
-  color:#555;border:1px solid #ddd;background:#fff;padding:7px 13px;
-  border-radius:100px;white-space:nowrap;flex-shrink:0;
-  transition:all .15s;font-family:inherit}
-.fp.on{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+/* サムネイル */
+.art-thumb{width:100%;aspect-ratio:16/9;display:block;overflow:hidden;
+  background:#1a1a1a}
+.art-thumb svg{width:100%;height:100%;display:block}
 
-/* SORT */
-.sort-row{padding:10px 20px;display:flex;align-items:center;justify-content:space-between;
-  background:#f7f7f5}
-.sort-c{font-size:12px;color:#999}
-.sort-c strong{color:#1a1a1a;font-weight:700}
-.sort-sel{font-size:12px;color:#555;border:1px solid #ddd;background:#fff;
-  padding:5px 10px;border-radius:6px;font-family:inherit;outline:none}
+/* リード */
+.art-lead{max-width:680px;margin:0 auto;
+  padding:24px 20px 24px;border-bottom:1px solid #f0f0f0;
+  font-size:16px;font-weight:500;line-height:2;color:#333;background:#fff}
 
-/* CLINIC CARDS */
-.cards{display:flex;flex-direction:column;gap:1px;background:#e5e5e0}
+/* 本文 */
+.art-body{max-width:680px;margin:0 auto;padding:0 20px 48px;background:#fff}
+.art-body h2{font-size:20px;font-weight:900;color:#1a1a1a;
+  margin:48px 0 16px;line-height:1.4;letter-spacing:-.01em}
+.art-body h2::before{content:'';display:block;width:28px;height:3px;
+  background:#00b894;margin-bottom:12px;border-radius:2px}
+.art-body h3{font-size:16px;font-weight:700;color:#1a1a1a;
+  margin:32px 0 12px;line-height:1.5}
+.art-body p{font-size:15px;line-height:2;color:#333;margin-bottom:20px}
+.art-body strong{font-weight:700;color:#1a1a1a}
+.art-body ul,.art-body ol{margin:0 0 20px;padding:0;list-style:none}
+.art-body ul li,.art-body ol li{font-size:15px;color:#333;line-height:1.85;
+  margin-bottom:10px;padding-left:20px;position:relative}
+.art-body ul li::before{content:'';position:absolute;left:4px;top:9px;
+  width:6px;height:6px;border-radius:50%;background:#00b894}
+.art-body ol{counter-reset:ol}
+.art-body ol li{counter-increment:ol}
+.art-body ol li::before{content:counter(ol);position:absolute;left:0;top:3px;
+  width:16px;height:16px;border-radius:50%;background:#1a1a1a;color:#fff;
+  font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.art-body a{color:#00b894;text-decoration:underline;text-underline-offset:3px}
+.art-body hr{border:none;border-top:1px solid #f0f0f0;margin:40px 0}
 
-/* ランキングカード */
-.rc{background:#fff;position:relative;transition:box-shadow .15s}
-.rc:hover{box-shadow:0 4px 20px rgba(0,0,0,.07);z-index:1}
+/* 目次 */
+.toc{background:#f8f8f6;border:1px solid #ebebeb;border-radius:10px;
+  padding:18px 20px;margin:0 0 32px}
+.toc-title{font-size:12px;font-weight:700;color:#aaa;letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:10px}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:6px;margin:0;padding:0}
+.toc-list li{padding-left:0}
+.toc-list li::before{display:none}
+.toc-list a{font-size:13px;color:#555;display:flex;align-items:center;gap:6px;
+  text-decoration:none;padding:2px 0}
+.toc-list a::before{content:'';width:5px;height:5px;border-radius:50%;
+  background:#00b894;flex-shrink:0}
+.toc-list a:hover{color:#00b894}
 
-/* ランク番号バー */
-.rc-rank{
-  display:flex;align-items:center;gap:10px;
-  padding:12px 16px 0;
-}
-.rank-num{
-  font-size:13px;font-weight:900;width:28px;height:28px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;
-  color:#fff;
-}
-.rank-1{background:#1a1a1a}
-.rank-2{background:#555}
-.rank-3{background:#888}
-.rank-n{background:#bbb}
-.rank-label{font-size:11px;color:#aaa;letter-spacing:.06em}
-/* 理由タグ */
-.rank-reason{
-  font-size:11px;font-weight:700;color:#00a381;
-  background:#e6f7f3;border:1px solid #b2e4d8;
-  padding:2px 10px;border-radius:100px;margin-left:auto;white-space:nowrap;
-}
-.rank-reason.amber{color:#8a5c00;background:#fff8e0;border-color:#f0d060}
-.rank-reason.blue{color:#1a5ca0;background:#e8f0ff;border-color:#b0c8f0}
-
-/* カードサムネイル */
-.rc-thumb{
-  height:130px;display:flex;align-items:center;justify-content:center;
-  font-size:15px;font-weight:700;letter-spacing:.04em;
-  color:rgba(255,255,255,.7);position:relative;overflow:hidden;
-  margin:10px 16px 0;border-radius:10px;
-}
-.rc-thumb-text{position:relative;z-index:1;text-align:center}
-.rc-thumb-name{font-size:22px;font-weight:900;color:#fff;display:block;margin-bottom:4px}
-.rc-thumb-catch{font-size:11px;color:rgba(255,255,255,.65);display:block}
-
-/* カードボディ */
-.rc-body{padding:14px 16px}
-.rc-name{font-size:17px;font-weight:900;margin-bottom:5px;letter-spacing:-.01em}
-.rc-catch{font-size:13px;color:#555;line-height:1.8;margin-bottom:12px}
-
-/* 報酬情報バッジ（運営者向け情報は表示しない） */
-
-/* スペック行 */
-.spec-row{display:flex;flex-direction:column;gap:6px;margin-bottom:12px;
-  background:#f8f8f6;border-radius:8px;padding:12px 14px}
-.spec-item{display:flex;align-items:flex-start;gap:8px;font-size:13px}
-.spec-label{color:#999;flex-shrink:0;min-width:72px;font-size:12px}
-.spec-val{color:#1a1a1a;font-weight:500;line-height:1.6}
-.spec-val em{font-style:normal;color:#00a381;font-weight:700}
-.spec-note{font-size:11px;color:#aaa;display:block;margin-top:1px}
-
-/* チップ */
-.chips{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
-.chip{font-size:11px;color:#00a381;background:#e6f7f3;border:1px solid #b2e4d8;
-  padding:3px 9px;border-radius:100px}
-.chip-g{font-size:11px;color:#888;background:#f2f2ef;border:1px solid #ddd;
-  padding:3px 9px;border-radius:100px}
-.chip-r{font-size:11px;color:#c04040;background:#fef0f0;border:1px solid #f0c0c0;
-  padding:3px 9px;border-radius:100px}
-
-/* CTA エリア */
-.rc-cta{
-  border-top:1px solid #f0f0f0;padding:12px 16px;
-  display:flex;align-items:center;gap:10px;
-}
-.cta-main{
-  flex:1;background:#1a1a1a;color:#fff;font-size:14px;font-weight:700;
-  padding:13px 0;border-radius:100px;text-align:center;
-  transition:opacity .15s;display:block;
-}
-.cta-main:hover{opacity:.82}
-.cta-main.green{background:#00b894}
-.cta-fav{width:42px;height:42px;border-radius:50%;border:1.5px solid #ddd;
-  display:flex;align-items:center;justify-content:center;
-  font-size:17px;flex-shrink:0;transition:all .15s}
-.cta-fav:hover{border-color:#e17055;color:#e17055}
-.cta-fav.faved{border-color:#e17055;color:#e17055;background:#fff5f5}
-
-/* 広告表示義務 */
-.ad-label{
-  font-size:10px;color:#bbb;text-align:right;
-  padding:0 16px 8px;letter-spacing:.04em;
-}
-
-/* INFO BOX */
-.info-box{
-  background:#f0faf5;border-left:4px solid #00b894;
-  border-radius:0 8px 8px 0;padding:16px 18px;margin:20px;
-}
-.info-box .label{font-size:11px;font-weight:700;color:#00a381;
+/* infobox */
+.info-box{background:#f0faf5;border-left:4px solid #00b894;
+  border-radius:0 8px 8px 0;padding:18px 20px;margin:24px 0}
+.info-box .lbl{font-size:11px;font-weight:700;color:#00a381;
   letter-spacing:.1em;margin-bottom:8px;display:flex;align-items:center;gap:5px}
 .info-box p{font-size:13px;color:#333;line-height:1.9;margin:0}
 
-.warn-box{
-  background:#fffbf0;border-left:4px solid #f0b030;
-  border-radius:0 8px 8px 0;padding:16px 18px;margin:20px;
-}
-.warn-box .label{font-size:11px;font-weight:700;color:#a07020;
+.warn-box{background:#fff9f0;border-left:4px solid #f0932b;
+  border-radius:0 8px 8px 0;padding:18px 20px;margin:24px 0}
+.warn-box .lbl{font-size:11px;font-weight:700;color:#c07020;
   letter-spacing:.1em;margin-bottom:8px;display:flex;align-items:center;gap:5px}
-.warn-box p{font-size:13px;color:#444;line-height:1.9;margin:0}
+.warn-box p{font-size:13px;color:#333;line-height:1.9;margin:0}
 
-/* 比較表 */
-.sec{padding:28px 20px}
-.sec-h{font-size:18px;font-weight:900;margin-bottom:4px;letter-spacing:-.01em}
-.sec-sub{font-size:12px;color:#888;margin-bottom:16px;line-height:1.75}
-.tbl-wrap{overflow-x:auto;border-radius:10px;border:1px solid #ebebeb}
-table{width:100%;border-collapse:collapse;font-size:12px;background:#fff;min-width:480px}
+/* テーブル */
+.tbl-wrap{overflow-x:auto;border-radius:8px;border:1px solid #ebebeb;margin:20px 0}
+table{width:100%;border-collapse:collapse;font-size:13px;background:#fff;min-width:300px}
 thead tr{background:#1a1a1a}
-thead th{padding:11px 13px;color:rgba(255,255,255,.6);font-weight:500;
-  font-size:10px;letter-spacing:.07em;text-align:center;white-space:nowrap}
-thead th:first-child{text-align:left;min-width:100px}
+thead th{padding:11px 14px;color:rgba(255,255,255,.6);font-weight:500;
+  font-size:11px;letter-spacing:.07em;text-align:center;white-space:nowrap}
+thead th:first-child{text-align:left}
 tbody tr{border-bottom:1px solid #f0f0f0;transition:background .1s}
-tbody tr:hover{background:#fafaf8}
 tbody tr:last-child{border-bottom:none}
-tbody td{padding:11px 13px;text-align:center;color:#444;vertical-align:middle}
-tbody td:first-child{text-align:left;font-weight:700;color:#1a1a1a}
+tbody tr:hover{background:#fafaf8}
+tbody td{padding:11px 14px;text-align:center;color:#444}
+tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
 .tok{color:#00b894;font-weight:700}
 .tng{color:#ccc}
 .tbl-hi td{background:#f0faf5!important}
 .tbl-note{font-size:11px;color:#aaa;padding:10px 14px;border-top:1px solid #f0f0f0;
-  line-height:1.85;font-style:italic;text-align:left}
+  line-height:1.85;font-style:italic}
 
-/* FLOW */
-.flow{display:flex;flex-direction:column;gap:0;margin-top:4px}
-.flow-item{display:flex;gap:13px;padding:0 0 22px;position:relative}
-.flow-item::before{content:'';position:absolute;left:16px;top:36px;
-  width:2px;height:calc(100% - 22px);background:#f0f0f0}
+/* フロー */
+.flow{display:flex;flex-direction:column;gap:0;margin:16px 0}
+.flow-item{display:flex;gap:13px;padding:0 0 20px;position:relative}
+.flow-item::before{content:'';position:absolute;left:15px;top:34px;
+  width:2px;height:calc(100% - 20px);background:#f0f0f0}
 .flow-item:last-child::before{display:none}
-.flow-n{width:32px;height:32px;border-radius:50%;background:#1a1a1a;color:#fff;
+.flow-n{width:30px;height:30px;border-radius:50%;background:#1a1a1a;color:#fff;
   font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;
   flex-shrink:0;position:relative;z-index:1}
-.flow-title{font-size:14px;font-weight:700;padding-top:4px;margin-bottom:3px}
-.flow-text{font-size:13px;color:#666;line-height:1.8}
+.flow-title{font-size:14px;font-weight:700;padding-top:4px;margin-bottom:3px;color:#1a1a1a}
+.flow-text{font-size:13px;color:#666;line-height:1.85}
 
 /* Q&A */
-.qa-list{border-radius:10px;border:1px solid #ebebeb;overflow:hidden}
+.qa-wrap{border:1px solid #ebebeb;border-radius:10px;overflow:hidden;margin:16px 0}
 .qa-item{background:#fff;border-bottom:1px solid #f0f0f0}
 .qa-item:last-child{border-bottom:none}
 .qa-q{display:flex;align-items:flex-start;gap:12px;padding:16px;
@@ -221,41 +153,53 @@ tbody td:first-child{text-align:left;font-weight:700;color:#1a1a1a}
   cursor:pointer;width:100%;text-align:left;transition:background .1s}
 .qa-q:hover,.qa-item.open .qa-q{background:#fafaf8}
 .q-mark{width:22px;height:22px;border-radius:50%;background:#1a1a1a;color:#fff;
-  font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.qa-chev{margin-left:auto;flex-shrink:0;color:#ccc;transition:transform .22s}
+  font-size:11px;font-weight:700;display:flex;align-items:center;
+  justify-content:center;flex-shrink:0}
+.qa-chev{margin-left:auto;flex-shrink:0;color:#ccc;transition:transform .2s}
 .qa-item.open .qa-chev{transform:rotate(180deg)}
-.qa-body{overflow:hidden;height:0;transition:height .24s cubic-bezier(.16,1,.3,1)}
+.qa-body{overflow:hidden;height:0;transition:height .22s cubic-bezier(.16,1,.3,1)}
 .qa-inner{padding:0 16px 16px 50px;font-size:13px;color:#555;line-height:2}
 
-/* ARTICLE CARDS */
-.art-section{padding:0 0 24px}
-.art-head{padding:0 20px 10px;display:flex;align-items:center;justify-content:space-between}
-.art-head h2{font-size:16px;font-weight:700}
-.art-head a{font-size:12px;color:#00b894;font-weight:500}
-.art-scroll{display:flex;gap:10px;overflow-x:auto;padding:0 20px 4px;
-  -webkit-overflow-scrolling:touch}
-.art-scroll::-webkit-scrollbar{display:none}
-.acard{background:#fff;border-radius:10px;border:1px solid #ebebeb;
-  overflow:hidden;flex-shrink:0;width:185px;cursor:pointer;transition:box-shadow .15s}
-.acard:hover{box-shadow:0 4px 14px rgba(0,0,0,.07)}
-.acard-img{height:84px;display:flex;align-items:center;justify-content:center}
-.acard-body{padding:10px 12px}
-.acard-cat{font-size:10px;color:#00b894;font-weight:700;letter-spacing:.08em;
-  text-transform:uppercase;margin-bottom:3px}
-.acard-title{font-size:12px;font-weight:600;line-height:1.6;color:#1a1a1a}
+/* CTA（記事内）*/
+.cta-inline{background:#1a1a1a;border-radius:12px;
+  padding:24px 20px;margin:32px 0;text-align:center}
+.cta-inline h3{font-size:17px;font-weight:900;color:#fff;margin-bottom:6px}
+.cta-inline p{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:16px;line-height:1.85}
+.cta-inline a{display:inline-block;background:#00b894;color:#fff;
+  font-size:14px;font-weight:700;padding:13px 28px;border-radius:100px;
+  transition:opacity .15s;text-decoration:none}
+.cta-inline a:hover{opacity:.88}
 
-/* CTA BLOCK */
-.cta-block{margin:0 20px 24px;background:#1a1a1a;border-radius:12px;
-  padding:24px 20px;text-align:center}
-.cta-block h2{font-size:17px;font-weight:900;color:#fff;margin-bottom:6px}
-.cta-block p{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:18px;line-height:1.85}
-.cta-block-btn{display:inline-block;background:#00b894;color:#fff;
-  font-size:14px;font-weight:700;padding:13px 32px;border-radius:100px;
+/* シェアバー */
+.share-bar{display:flex;gap:10px;padding:24px 0;
+  border-top:1px solid #f0f0f0;margin-top:32px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;font-weight:700;padding:10px 18px;border-radius:100px;
   border:none;cursor:pointer;font-family:inherit;transition:opacity .15s}
-.cta-block-btn:hover{opacity:.88}
+.share-btn:hover{opacity:.85}
+.share-x{background:#000;color:#fff}
+.share-line{background:#06C755;color:#fff}
+
+/* 関連記事 */
+.related{padding:0 0 24px;background:#fff;border-top:1px solid #f0f0f0}
+.related-head{padding:20px 20px 12px;display:flex;
+  align-items:center;justify-content:space-between}
+.related-head h2{font-size:15px;font-weight:700}
+.related-head a{font-size:12px;color:#00b894;font-weight:500}
+.related-scroll{display:flex;gap:10px;overflow-x:auto;padding:0 20px 4px;
+  -webkit-overflow-scrolling:touch}
+.related-scroll::-webkit-scrollbar{display:none}
+.rel-card{background:#fff;border:1px solid #ebebeb;border-radius:10px;
+  overflow:hidden;flex-shrink:0;width:180px;cursor:pointer;transition:box-shadow .15s}
+.rel-card:hover{box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.rel-img{height:84px;display:flex;align-items:center;justify-content:center}
+.rel-body{padding:10px 12px}
+.rel-cat{font-size:10px;color:#00b894;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:3px}
+.rel-title{font-size:12px;font-weight:600;line-height:1.6;color:#1a1a1a}
 
 /* DISCLAIMER */
-.disclaimer{padding:16px 20px;font-size:11px;color:#bbb;line-height:2;
+.disclaimer{padding:14px 20px;font-size:11px;color:#bbb;line-height:2;
   border-top:1px solid #f0f0f0;background:#fff}
 
 /* FOOTER */
@@ -269,426 +213,436 @@ tbody td:first-child{text-align:left;font-weight:700;color:#1a1a1a}
 .footer-copy{font-size:10px;color:rgba(255,255,255,.15);
   border-top:1px solid rgba(255,255,255,.07);padding-top:14px}
 
-/* STICKY FOOTER */
+/* SF */
 .sf{position:fixed;bottom:0;left:0;right:0;z-index:200;
   background:#fff;border-top:1px solid #ebebeb;
   padding:10px 16px;display:flex;gap:10px}
 .sf-main{flex:2;background:#1a1a1a;color:#fff;font-size:14px;font-weight:700;
-  border-radius:100px;border:none;cursor:pointer;font-family:inherit;padding:13px 0;
-  transition:opacity .15s}
-.sf-main:hover{opacity:.85}
+  border-radius:100px;border:none;cursor:pointer;font-family:inherit;padding:13px 0}
 .sf-sub{flex:1;background:#fff;color:#1a1a1a;font-size:13px;font-weight:700;
   border:1.5px solid #ddd;border-radius:100px;cursor:pointer;font-family:inherit;padding:12px 0}
 
-@media(min-width:600px){
-  .nav,.hero,.filter-bar,.sort-row,.sec,.info-box,.warn-box,.cta-block,.disclaimer,.footer{
-    padding-left:32px;padding-right:32px}
-  .info-box,.warn-box{margin-left:32px;margin-right:32px}
-  .cta-block{margin-left:32px;margin-right:32px}
-  .art-head,.art-scroll{padding-left:32px;padding-right:32px}
-  .sf{padding-left:32px;padding-right:32px}
+/* タブ */
+.tab-nav{background:#fff;border-bottom:1px solid #ebebeb;
+  display:flex;overflow-x:auto;position:relative;scrollbar-width:none}
+.tab-nav::-webkit-scrollbar{display:none}
+.tab-btn{flex-shrink:0;padding:14px 20px;font-size:13px;font-weight:700;
+  color:#aaa;background:none;border:none;cursor:pointer;
+  border-bottom:2px solid transparent;transition:color .15s,border-color .15s;
+  white-space:nowrap}
+.tab-btn.on{color:#1a1a1a;border-bottom-color:#00b894}
+.tab-panel{display:none;max-width:680px;margin:0 auto;padding:32px 20px}
+.tab-panel.on{display:block}
+
+@media(min-width:640px){
+  .art-hero-inner,.art-body,.art-lead,.disclaimer{padding-left:32px;padding-right:32px}
+  .related-head,.related-scroll,.toc,.info-box,.warn-box{padding-left:32px;padding-right:32px}
+  .nav,.bc,.sf{padding-left:32px;padding-right:32px}
+  .footer{padding-left:32px;padding-right:32px}
+  .tab-panel{padding-left:32px;padding-right:32px}
 }
 
+/* ── ホーム専用 ── */
+.hero-home{background:#fff;border-bottom:1px solid #ebebeb;padding:28px 20px 24px}
+.hero-home h1{font-size:clamp(22px,5vw,30px);font-weight:900;line-height:1.3;
+  letter-spacing:-.02em;margin-bottom:6px}
+.hero-home p{font-size:13px;color:#777;line-height:1.85}
+.ad-notice{background:#fffdf0;border:1px solid #f0d060;border-radius:8px;
+  padding:10px 14px;font-size:12px;color:#7a6200;line-height:1.75;
+  display:flex;gap:8px;align-items:flex-start;margin-top:14px}
+/* セクションヘッダー */
+.sh{padding:24px 20px 12px;display:flex;align-items:center;justify-content:space-between}
+.sh h2{font-size:17px;font-weight:900;letter-spacing:-.01em}
+.sh a{font-size:12px;color:#00b894;font-weight:500;text-decoration:none}
+/* 診断バナー */
+.shindan-banner{
+  margin:0 16px 8px;border-radius:14px;
+  background:linear-gradient(135deg,#0a1a14,#0d2820);
+  padding:24px 20px;position:relative;overflow:hidden;cursor:pointer;
+  transition:opacity .15s;
+}
+.shindan-banner:hover{opacity:.92}
+.shindan-banner::before{
+  content:'';position:absolute;right:-40px;top:-40px;
+  width:180px;height:180px;border-radius:50%;
+  background:rgba(0,184,148,0.12);
+}
+.shindan-banner-label{font-size:11px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:#00e5b0;margin-bottom:8px;display:block}
+.shindan-banner h2{font-size:22px;font-weight:900;color:#fff;
+  line-height:1.3;margin-bottom:6px;letter-spacing:-.01em}
+.shindan-banner p{font-size:13px;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:16px}
+.shindan-banner-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:#00b894;color:#fff;font-size:14px;font-weight:700;
+  padding:12px 24px;border-radius:100px;border:none;cursor:pointer;
+  font-family:inherit;transition:background .15s;
+}
+.shindan-banner-btn:hover{background:#00a381}
+.shindan-steps{
+  display:flex;gap:16px;margin-top:14px;
+}
+.shindan-step{display:flex;align-items:center;gap:5px;
+  font-size:11px;color:rgba(255,255,255,.4)}
+.shindan-step-num{width:18px;height:18px;border-radius:50%;
+  background:rgba(255,255,255,.15);color:rgba(255,255,255,.7);
+  font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0}
+/* クリニックカード（コンパクト版） */
+.cc-list{display:flex;flex-direction:column;gap:1px;background:#e5e5e0}
+.cc-item{background:#fff;display:flex;align-items:center;gap:14px;
+  padding:14px 16px;cursor:pointer;transition:background .1s;position:relative}
+.cc-item:hover{background:#fafaf8}
+.cc-item-rank{width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:900;color:#fff}
+.ri-1{background:#1a1a1a}.ri-2{background:#555}.ri-3{background:#888}.ri-n{background:#bbb}
+.cc-item-icon{width:44px;height:44px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;
+  color:rgba(255,255,255,.75);letter-spacing:-.02em}
+.cc-item-body{flex:1;min-width:0}
+.cc-item-name{font-size:15px;font-weight:700;margin-bottom:2px}
+.cc-item-catch{font-size:12px;color:#888;line-height:1.6;white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.cc-item-price{text-align:right;flex-shrink:0}
+.cc-item-price-main{font-size:14px;font-weight:700;color:#1a1a1a;display:block}
+.cc-item-price-sub{font-size:10px;color:#aaa;display:block;white-space:nowrap}
+.cc-item-arrow{color:#ccc;font-size:14px;flex-shrink:0}
+.ad-micro{font-size:9px;color:#bbb;position:absolute;top:4px;right:8px}
+/* 記事カード（グリッド） */
+.art-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 16px 4px}
+.art-grid-card{background:#fff;border:1px solid #ebebeb;border-radius:10px;
+  overflow:hidden;cursor:pointer;transition:box-shadow .15s}
+.art-grid-card:hover{box-shadow:0 4px 14px rgba(0,0,0,.07)}
+.art-grid-img{height:72px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.art-grid-body{padding:10px 12px}
+.art-grid-cat{font-size:10px;color:#00b894;font-weight:700;
+  letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+.art-grid-title{font-size:12px;font-weight:600;line-height:1.6;color:#1a1a1a}
+/* GA設置案内バナー */
+.ga-setup{background:#f0f8ff;border:1px solid #b0d0f0;border-radius:10px;
+  padding:14px 16px;margin:0 16px 16px;font-size:12px;color:#1a4a7a;line-height:1.85}
+.ga-setup strong{font-weight:700;display:block;margin-bottom:4px}
+/* 診断UI */
+.shindan-wrap{max-width:680px;margin:0 auto;padding:0 20px 48px}
+.shindan-progress{height:3px;background:#f0f0f0;border-radius:2px;margin-bottom:28px;overflow:hidden}
+.shindan-progress-bar{height:100%;background:#00b894;border-radius:2px;
+  transition:width .3s ease}
+.shindan-q-num{font-size:11px;font-weight:700;letter-spacing:.1em;
+  color:#00b894;margin-bottom:8px;text-transform:uppercase}
+.shindan-q{font-size:18px;font-weight:900;line-height:1.45;
+  margin-bottom:6px;letter-spacing:-.01em}
+.shindan-q-sub{font-size:13px;color:#888;margin-bottom:24px;line-height:1.7}
+.shindan-opts{display:flex;flex-direction:column;gap:10px}
+.shindan-opt{
+  background:#fff;border:1.5px solid #e5e5e0;border-radius:12px;
+  padding:16px 18px;cursor:pointer;text-align:left;width:100%;
+  font-family:inherit;transition:all .15s;display:flex;align-items:flex-start;gap:12px;
+}
+.shindan-opt:hover{border-color:#00b894;background:#f0faf5}
+.shindan-opt.selected{border-color:#00b894;background:#e6f7f3}
+.shindan-opt-icon{width:32px;height:32px;border-radius:50%;background:#f0f0f0;
+  display:flex;align-items:center;justify-content:center;font-size:16px;
+  flex-shrink:0;transition:background .15s}
+.shindan-opt:hover .shindan-opt-icon,
+.shindan-opt.selected .shindan-opt-icon{background:#00b894;color:#fff}
+.shindan-opt-body{}
+.shindan-opt-label{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:2px}
+.shindan-opt-desc{font-size:12px;color:#888;line-height:1.6}
+/* 結果 */
+.result-card{background:#fff;border:1px solid #ebebeb;border-radius:14px;
+  overflow:hidden;margin-bottom:16px}
+.result-header{padding:20px 20px 16px;border-bottom:1px solid #f0f0f0}
+.result-badge{display:inline-block;font-size:11px;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase;color:#00b894;
+  background:#e6f7f3;border:1px solid #b2e4d8;
+  padding:4px 12px;border-radius:100px;margin-bottom:10px}
+.result-title{font-size:20px;font-weight:900;line-height:1.35;
+  letter-spacing:-.01em;margin-bottom:6px}
+.result-desc{font-size:14px;color:#555;line-height:1.9}
+.result-clinics{padding:16px 20px}
+.result-clinic-label{font-size:11px;font-weight:700;color:#aaa;
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.result-clinic-item{display:flex;align-items:center;gap:12px;
+  padding:12px 0;border-bottom:1px solid #f5f5f5}
+.result-clinic-item:last-child{border-bottom:none}
+.result-clinic-rank{width:22px;height:22px;border-radius:50%;background:#1a1a1a;
+  color:#fff;font-size:10px;font-weight:700;display:flex;align-items:center;
+  justify-content:center;flex-shrink:0}
+.result-clinic-name{font-size:14px;font-weight:700;flex:1}
+.result-clinic-reason{font-size:11px;color:#888}
+.result-clinic-btn{background:#1a1a1a;color:#fff;font-size:12px;font-weight:700;
+  padding:8px 14px;border-radius:100px;border:none;cursor:pointer;
+  font-family:inherit;white-space:nowrap;transition:opacity .15s}
+.result-clinic-btn.green{background:#00b894}
+.result-clinic-btn:hover{opacity:.82}
+/* share buttons */
+.result-share{padding:16px 20px;border-top:1px solid #f0f0f0;
+  display:flex;gap:10px;flex-wrap:wrap}
+.share-x{background:#000;color:#fff;font-size:13px;font-weight:700;
+  padding:10px 18px;border-radius:100px;border:none;cursor:pointer;
+  display:flex;align-items:center;gap:6px;font-family:inherit;transition:opacity .15s}
+.share-line{background:#06C755;color:#fff;font-size:13px;font-weight:700;
+  padding:10px 18px;border-radius:100px;border:none;cursor:pointer;
+  display:flex;align-items:center;gap:6px;font-family:inherit;transition:opacity .15s}
+.share-x:hover,.share-line:hover{opacity:.85}
+.retry-btn{background:#fff;color:#1a1a1a;font-size:13px;font-weight:700;
+  padding:10px 18px;border-radius:100px;border:1.5px solid #ddd;
+  cursor:pointer;font-family:inherit;transition:background .15s}
+.retry-btn:hover{background:#f5f5f5}
+@media(min-width:600px){
+  .shindan-wrap,.sh{padding-left:32px;padding-right:32px}
+  .art-grid{padding-left:32px;padding-right:32px}
+  .shindan-banner,.ga-setup{margin-left:32px;margin-right:32px}
+  .hero-home,.ad-notice{padding-left:32px;padding-right:32px}
+}
 </style>
 </head>
 <body><nav class="nav">
   <a href="index.html" class="nav-logo" style="text-decoration:none">ぴる<em>ナビ</em></a>
   <div class="nav-r">
-    <a href="article-basic.html">基礎知識</a>
-    <a href="article-cost.html">費用比較</a>
-    <a href="index.html" class="nav-cta">クリニックを探す</a>
+    <a href="shindan.html">診断</a>
+    <a href="compare.html">比較</a>
+    <a href="article-basic.html">記事</a>
+    <a href="compare.html" class="nav-cta">クリニックを探す</a>
   </div>
 </nav>
-<div class="bc">
-  <a href="index.html">ホーム</a><span>›</span><span>クリニック比較</span>
-</div>
 
-<div class="hero">
-  <p class="hero-label">2026年5月 更新</p>
-  <h1>オンラインピル処方<br>クリニック比較</h1>
-  <p class="hero-sub">公式サイトの情報をもとに、費用・配送・サービスを整理しました。<br>料金の詳細は必ず各クリニックの公式サイトでご確認ください。</p>
-  <div class="hero-ad-notice">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#7a6200" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:2px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    <span>本サイトはアフィリエイト広告を掲載しています。掲載クリニックは公式情報をもとに選定しています。</span>
+<div class="hero-home">
+  <p style="font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#00b894;margin-bottom:6px">2026年5月 更新</p>
+  <h1>ピル処方クリニックを<br>かんたんに選ぶ</h1>
+  <p>診断で絞り込む・料金で比較する・記事で学ぶ。<br>公式情報をもとに整理した比較情報サイトです。</p>
+  <div class="ad-notice">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    本サイトはアフィリエイト広告を掲載しています。料金は変更される場合があり、必ず公式サイトでご確認ください。
   </div>
 </div>
 
-<div class="filter-bar">
-  <button class="fp on" onclick="filt('all',this)">すべて</button>
-  <button class="fp" onclick="filt('shoshin-free',this)">初診料無料</button>
-  <button class="fp" onclick="filt('afterpill',this)">アフターピル対応</button>
-  <button class="fp" onclick="filt('app',this)">アプリ対応</button>
-  <button class="fp" onclick="filt('seiri-ido',this)">生理移動ピル</button>
+<!-- GA設置リマインダー（公開前に削除） -->
+<div class="ga-setup" style="margin-top:16px">
+  <strong>【運営メモ】Googleアナリティクス未設置</strong>
+  ラッコM&A売却に必要です。GA4を設定してトラッキングコードをhead内のコメント部分に貼ってください。設置後このボックスを削除すること。
 </div>
 
-<div class="sort-row">
-  <p class="sort-c"><strong id="rcnt">5</strong>件のクリニック</p>
-  <select class="sort-sel"><option>編集部おすすめ順</option></select>
-</div>
-
-<div class="cards">
-
-  <!-- 1位：メデリピル（EPC最高・確定率93%） -->
-  <div class="rc" id="mederi" data-tags="all shoshin-free app">
-    <div class="rc-rank">
-      <span class="rank-num rank-1">1</span>
-      <span class="rank-label">編集部おすすめ</span>
-      <span class="rank-reason">成約率が高い</span>
-    </div>
-    <div class="rc-thumb" style="background:linear-gradient(135deg,#0a1e38,#102840)">
-      <div class="rc-thumb-text">
-        <span class="rc-thumb-name">メデリピル</span>
-        <span class="rc-thumb-catch">産婦人科医に相談できるオンラインピル</span>
-      </div>
-    </div>
-    <p class="ad-label">PR・広告</p>
-    <div class="rc-body">
-      <p class="rc-name">メデリピル</p>
-      <p class="rc-catch">医師への相談が手軽にできるオンラインピルサービス。初月無料トライアルを実施中（条件は公式サイトでご確認ください）。</p>
-      <div class="spec-row">
-        <div class="spec-item">
-          <span class="spec-label">初診料</span>
-          <span class="spec-val"><em>無料</em><small class="spec-note">※公式サイトで最新情報をご確認ください</small></span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">低用量ピル</span>
-          <span class="spec-val">公式サイトで確認<small class="spec-note">※料金は変更される場合があります</small></span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">特徴</span>
-          <span class="spec-val">産婦人科医へのオンライン相談・アプリ対応</span>
-        </div>
-      </div>
-      <div class="chips">
-        <span class="chip">初診料無料</span>
-        <span class="chip">産婦人科医に相談</span>
-        <span class="chip">アプリ対応</span>
-        <span class="chip-g">料金は公式サイトで確認</span>
-      </div>
-    </div>
-    <div class="rc-cta">
-      <a class="cta-main green" href="https://mederi.jp" target="_blank" rel="noopener noreferrer">
-        メデリピル 公式サイトを見る →
-      </a>
-      <button class="cta-fav" data-fav="mederi">♡</button>
-    </div>
-  </div>
-
-  <!-- 2位：マイピル（低用量ピル・報酬6,000円） -->
-  <div class="rc" id="mypill" data-tags="all shoshin-free app seiri-ido">
-    <div class="rc-rank">
-      <span class="rank-num rank-2">2</span>
-      <span class="rank-label">費用で選ぶなら</span>
-      <span class="rank-reason amber">最短翌日お届け</span>
-    </div>
-    <div class="rc-thumb" style="background:linear-gradient(135deg,#1a0a28,#2a1040)">
-      <div class="rc-thumb-text">
-        <span class="rc-thumb-name">マイピル</span>
-        <span class="rc-thumb-catch">スマホ1つで完結・最短翌日お届け</span>
-      </div>
-    </div>
-    <p class="ad-label">PR・広告</p>
-    <div class="rc-body">
-      <p class="rc-name">マイピル</p>
-      <p class="rc-catch">来院不要でスマホ1つで完結するオンラインピル診療サービス。低用量ピル・アフターピル・生理移動ピルに対応。</p>
-      <div class="spec-row">
-        <div class="spec-item">
-          <span class="spec-label">初診料</span>
-          <span class="spec-val">公式サイトで確認</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">対応ピル</span>
-          <span class="spec-val">低用量ピル・アフターピル・生理移動ピル</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">配送</span>
-          <span class="spec-val">最短翌日お届け</span>
-        </div>
-      </div>
-      <div class="chips">
-        <span class="chip">低用量ピル対応</span>
-        <span class="chip">アフターピル対応</span>
-        <span class="chip">生理移動ピル対応</span>
-        <span class="chip">最短翌日配送</span>
-      </div>
-    </div>
-    <div class="rc-cta">
-      <a class="cta-main" href="https://mypill.jp" target="_blank" rel="noopener noreferrer">
-        マイピル 公式サイトを見る →
-      </a>
-      <button class="cta-fav" data-fav="mypill">♡</button>
-    </div>
-  </div>
-
-  <!-- 3位：ルナルナ おくすり便（確定率100%） -->
-  <div class="rc" id="lunaluna" data-tags="all app">
-    <div class="rc-rank">
-      <span class="rank-num rank-3">3</span>
-      <span class="rank-label">ルナルナ連携</span>
-      <span class="rank-reason blue">飲み忘れ通知あり</span>
-    </div>
-    <div class="rc-thumb" style="background:linear-gradient(135deg,#18082a,#281240)">
-      <div class="rc-thumb-text">
-        <span class="rc-thumb-name">ルナルナ おくすり便</span>
-        <span class="rc-thumb-catch">生理管理アプリと連携</span>
-      </div>
-    </div>
-    <p class="ad-label">PR・広告</p>
-    <div class="rc-body">
-      <p class="rc-name">ルナルナ おくすり便</p>
-      <p class="rc-catch">生理管理アプリ「ルナルナ」と連携したオンラインピル処方サービス。服薬管理・飲み忘れ通知機能が使える。</p>
-      <div class="spec-row">
-        <div class="spec-item">
-          <span class="spec-label">特徴</span>
-          <span class="spec-val">ルナルナアプリと連携・飲み忘れ通知機能</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">料金</span>
-          <span class="spec-val">公式サイトで確認<small class="spec-note">※料金は変更される場合があります</small></span>
-        </div>
-      </div>
-      <div class="chips">
-        <span class="chip">ルナルナ連携</span>
-        <span class="chip">飲み忘れ通知</span>
-        <span class="chip">アプリ対応</span>
-        <span class="chip-g">料金は公式サイトで確認</span>
-      </div>
-    </div>
-    <div class="rc-cta">
-      <a class="cta-main" href="https://medicine.lnln.jp" target="_blank" rel="noopener noreferrer">
-        ルナルナ おくすり便 公式サイトを見る →
-      </a>
-      <button class="cta-fav" data-fav="lunaluna">♡</button>
-    </div>
-  </div>
-
-  <!-- 4位：レバクリ（確定率100%） -->
-  <div class="rc" id="levacli" data-tags="all">
-    <div class="rc-rank">
-      <span class="rank-num rank-n">4</span>
-      <span class="rank-label">待ち時間なし</span>
-    </div>
-    <div class="rc-thumb" style="background:linear-gradient(135deg,#0a2010,#142a18)">
-      <div class="rc-thumb-text">
-        <span class="rc-thumb-name">レバクリ</span>
-        <span class="rc-thumb-catch">オンラインのピルクリニック</span>
-      </div>
-    </div>
-    <p class="ad-label">PR・広告</p>
-    <div class="rc-body">
-      <p class="rc-name">レバクリ</p>
-      <p class="rc-catch">待ち時間なしで治療ができるオンラインのピルクリニック。レバレジーズ株式会社が運営。</p>
-      <div class="spec-row">
-        <div class="spec-item">
-          <span class="spec-label">特徴</span>
-          <span class="spec-val">待ち時間なし・オンライン完結</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">料金</span>
-          <span class="spec-val">公式サイトで確認</span>
-        </div>
-      </div>
-      <div class="chips">
-        <span class="chip">オンライン完結</span>
-        <span class="chip-g">料金は公式サイトで確認</span>
-      </div>
-    </div>
-    <div class="rc-cta">
-      <a class="cta-main" href="https://leva-cli.jp" target="_blank" rel="noopener noreferrer">
-        レバクリ 公式サイトを見る →
-      </a>
-      <button class="cta-fav" data-fav="levacli">♡</button>
-    </div>
-  </div>
-
-  <!-- 5位：エミシアクリニック（アフターピル特化） -->
-  <div class="rc" id="emisia" data-tags="all afterpill">
-    <div class="rc-rank">
-      <span class="rank-num rank-n">5</span>
-      <span class="rank-label">アフターピル特化</span>
-    </div>
-    <div class="rc-thumb" style="background:linear-gradient(135deg,#200a0a,#341010)">
-      <div class="rc-thumb-text">
-        <span class="rc-thumb-name">エミシアクリニック</span>
-        <span class="rc-thumb-catch">アフターピル処方実績多数</span>
-      </div>
-    </div>
-    <p class="ad-label">PR・広告</p>
-    <div class="rc-body">
-      <p class="rc-name">エミシアクリニック</p>
-      <p class="rc-catch">アフターピル処方の実績が多いオンラインクリニック。緊急時の相談先として検討できる。</p>
-      <div class="spec-row">
-        <div class="spec-item">
-          <span class="spec-label">特徴</span>
-          <span class="spec-val">アフターピル処方実績多数・LINE対応</span>
-        </div>
-        <div class="spec-item">
-          <span class="spec-label">料金</span>
-          <span class="spec-val">公式サイトで確認</span>
-        </div>
-      </div>
-      <div class="chips">
-        <span class="chip">アフターピル対応</span>
-        <span class="chip">LINE対応</span>
-        <span class="chip-g">料金は公式サイトで確認</span>
-      </div>
-    </div>
-    <div class="rc-cta">
-      <a class="cta-main" href="https://emisia-clinic.jp" target="_blank" rel="noopener noreferrer">
-        エミシアクリニック 公式サイトを見る →
-      </a>
-      <button class="cta-fav" data-fav="emisia">♡</button>
-    </div>
-  </div>
-
-</div><!-- /cards -->
-
-<!-- スマルナについて -->
-<div class="info-box" style="margin-top:20px">
-  <p class="label">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-    スマルナについて
-  </p>
-  <p>スマルナは現在A8.netのアフィリエイトプログラムに掲載がないため、本ランキングには含めていません。スマルナをご検討の方は<a href="https://smaluna.com" target="_blank" rel="noopener noreferrer" style="color:#00b894;text-decoration:underline">スマルナ公式サイト</a>を直接ご確認ください。初診料・再診料は無料（2025年3月改定）で、低用量ピル（ラベルフィーユ）は12シート一括で1シート2,380円です。</p>
-</div>
-
-<!-- Q&A -->
-<div class="sec" style="padding-top:20px">
-  <p class="sec-h">よくある質問</p>
-<div class="qa-list" data-accordion><div class="qa-item" data-accordion-item>
-  <button class="qa-q" data-accordion-trigger aria-expanded="false">
-    <span class="q-mark">Q</span>このサイトはどのクリニックを推薦していますか？
-    <span class="qa-chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+<!-- 診断バナー -->
+<div class="shindan-banner" onclick="location.href='shindan.html'">
+  <span class="shindan-banner-label">かんたん診断 3問・1分</span>
+  <h2>あなたに合う<br>ピルクリニックを診断</h2>
+  <p>目的・優先条件を選ぶだけで<br>おすすめクリニックを絞り込めます</p>
+  <button class="shindan-banner-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    無料で診断する
   </button>
-  <div class="qa-body" data-accordion-body>
-    <div class="qa-inner">本サイトはアフィリエイト広告を掲載しており、A8.netで確認できるプログラムをもとにクリニックを掲載しています。特定のクリニックを医療的に推奨するものではありません。ご自身の症状・目的に合わせて、各クリニックの公式サイトでご確認の上、ご判断ください。</div>
-  </div>
-</div><div class="qa-item" data-accordion-item>
-  <button class="qa-q" data-accordion-trigger aria-expanded="false">
-    <span class="q-mark">Q</span>掲載している料金は正確ですか？
-    <span class="qa-chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-  </button>
-  <div class="qa-body" data-accordion-body>
-    <div class="qa-inner">料金・サービス内容は各クリニックの公式サイトをもとに整理していますが、変更される場合があります。必ず各クリニントの公式サイトで最新情報をご確認ください。本サイトは情報の正確性を保証するものではありません。</div>
-  </div>
-</div><div class="qa-item" data-accordion-item>
-  <button class="qa-q" data-accordion-trigger aria-expanded="false">
-    <span class="q-mark">Q</span>アフターピルはどのクリニックで処方してもらえますか？
-    <span class="qa-chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-  </button>
-  <div class="qa-body" data-accordion-body>
-    <div class="qa-inner">本サイト掲載クリニックのうち、マイピルとエミシアクリニックがアフターピルに対応しています。ただし対応状況・料金は変更される場合があるため、公式サイトで必ずご確認ください。アフターピルは72時間以内の服用が推奨されており、緊急性の高い場合は早急に各クリニントに問い合わせてください。</div>
-  </div>
-</div><div class="qa-item" data-accordion-item>
-  <button class="qa-q" data-accordion-trigger aria-expanded="false">
-    <span class="q-mark">Q</span>オンライン処方は安全ですか？
-    <span class="qa-chev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-  </button>
-  <div class="qa-body" data-accordion-body>
-    <div class="qa-inner">掲載しているクリニントは国内の医療機関によるオンライン診療を行っています。医師が問診内容を確認した上で処方されます。ただし血栓症リスクがある方など、処方できないケースがあります。心配な場合は対面の婦人科への受診をご検討ください。</div>
-  </div>
-</div></div>
-</div>
-
-<!-- フロー -->
-<div class="sec" style="padding-top:0">
-  <p class="sec-h">はじめての方へ</p>
-  <p class="sec-sub">一般的なオンライン処方の流れです。クリニックによって異なります。</p>
-  <div class="flow">
-    <div class="flow-item"><div class="flow-n">1</div><div><p class="flow-title">クリニックを選ぶ</p><p class="flow-text">費用・機能・配送速度を比較して選択。公式サイトで最新情報を必ず確認してください。</p></div></div>
-    <div class="flow-item"><div class="flow-n">2</div><div><p class="flow-title">オンライン問診（約5〜10分）</p><p class="flow-text">アプリまたはブラウザで健康状態を入力。既往症・服薬状況を正直に記入してください。</p></div></div>
-    <div class="flow-item"><div class="flow-n">3</div><div><p class="flow-title">医師が審査・処方</p><p class="flow-text">問診内容をもとに医師が処方可否を判断します。処方できないケースもあります。</p></div></div>
-    <div class="flow-item"><div class="flow-n">4</div><div><p class="flow-title">自宅に届く</p><p class="flow-text">配送速度・方法はクリニックによって異なります。詳細は各公式サイトでご確認ください。</p></div></div>
+  <div class="shindan-steps">
+    <span class="shindan-step"><span class="shindan-step-num">1</span>目的を選ぶ</span>
+    <span class="shindan-step"><span class="shindan-step-num">2</span>条件を選ぶ</span>
+    <span class="shindan-step"><span class="shindan-step-num">3</span>結果を見る</span>
   </div>
 </div>
 
-<div class="art-section">
-  <div class="art-head"><h2>関連記事</h2><a href="article-basic.html">すべて見る →</a></div>
-  <div class="art-scroll"><div class="acard" onclick="location.href='article-basic.html'"><div class="acard-img" style="background:#e6f7f3"></div><div class="acard-body"><p class="acard-cat">基礎知識</p><p class="acard-title">低用量ピルとは？効果・種類・選び方</p></div></div><div class="acard" onclick="location.href='article-side-effects.html'"><div class="acard-img" style="background:#fff4ee"></div><div class="acard-body"><p class="acard-cat">副作用</p><p class="acard-title">飲み始めの吐き気はいつまで続く？</p></div></div><div class="acard" onclick="location.href='article-cost.html'"><div class="acard-img" style="background:#f0f0ff"></div><div class="acard-body"><p class="acard-cat">費用比較</p><p class="acard-title">年間の実質費用を比較してみた</p></div></div><div class="acard" onclick="location.href='article-afterpill.html'"><div class="acard-img" style="background:#fff0f0"></div><div class="acard-body"><p class="acard-cat">アフターピル</p><p class="acard-title">オンラインで処方する方法と注意点</p></div></div><div class="acard" onclick="location.href='article-forget.html'"><div class="acard-img" style="background:#fffaee"></div><div class="acard-body"><p class="acard-cat">飲み方</p><p class="acard-title">飲み忘れたらどうする？対処法</p></div></div><div class="acard" onclick="location.href='article-pms.html'"><div class="acard-img" style="background:#f8f0ff"></div><div class="acard-body"><p class="acard-cat">PMS・月経</p><p class="acard-title">PMSにピルは効く？月経との関係</p></div></div></div>
+<!-- クリニック一覧（コンパクト） -->
+<div class="sh" style="margin-top:8px">
+  <h2>クリニック比較</h2>
+  <a href="compare.html">全て見る →</a>
 </div>
-<div class="cta-block">
-  <h2>まず公式サイトで確認する</h2>
-  <p>EPC・確定率ともに高いメデリピルをまずチェック。<br>料金・最新情報は公式サイトでご確認ください。</p>
-  <a class="cta-block-btn" href="https://mederi.jp" target="_blank" rel="noopener noreferrer">メデリピル 公式サイトを見る →</a>
+
+<div class="cc-list">
+
+  <div class="cc-item" onclick="location.href='compare.html#mederi'">
+    <span class="ad-micro">PR</span>
+    <span class="cc-item-rank ri-1">1</span>
+    <span class="cc-item-icon" style="background:linear-gradient(135deg,#0a1e38,#102840)">M</span>
+    <div class="cc-item-body">
+      <p class="cc-item-name">メデリピル</p>
+      <p class="cc-item-catch">初診料無料・産婦人科医・最短当日発送</p>
+    </div>
+    <div class="cc-item-price">
+      <span class="cc-item-price-main">約2,970円</span>
+      <span class="cc-item-price-sub">/月（2ヶ月目〜）</span>
+    </div>
+    <span class="cc-item-arrow">›</span>
+  </div>
+
+  <div class="cc-item" onclick="location.href='compare.html#mypill'">
+    <span class="ad-micro">PR</span>
+    <span class="cc-item-rank ri-2">2</span>
+    <span class="cc-item-icon" style="background:linear-gradient(135deg,#1a0a28,#2a1040)">M</span>
+    <div class="cc-item-body">
+      <p class="cc-item-name">マイピル</p>
+      <p class="cc-item-catch">電話診療・当日発送・アフターピル対応</p>
+    </div>
+    <div class="cc-item-price">
+      <span class="cc-item-price-main">約2,959円</span>
+      <span class="cc-item-price-sub">/月（初診1,650円）</span>
+    </div>
+    <span class="cc-item-arrow">›</span>
+  </div>
+
+  <div class="cc-item" onclick="location.href='compare.html#lunaluna'">
+    <span class="ad-micro">PR</span>
+    <span class="cc-item-rank ri-3">3</span>
+    <span class="cc-item-icon" style="background:linear-gradient(135deg,#18082a,#281240)">L</span>
+    <div class="cc-item-body">
+      <p class="cc-item-name">ルナルナ おくすり便</p>
+      <p class="cc-item-catch">ルナルナ連携・送料込み・飲み忘れ通知</p>
+    </div>
+    <div class="cc-item-price">
+      <span class="cc-item-price-main">1,898円〜</span>
+      <span class="cc-item-price-sub">/月（初診1,500円）</span>
+    </div>
+    <span class="cc-item-arrow">›</span>
+  </div>
+
+  <div class="cc-item" onclick="location.href='compare.html#emisia'">
+    <span class="ad-micro">PR</span>
+    <span class="cc-item-rank ri-n">4</span>
+    <span class="cc-item-icon" style="background:linear-gradient(135deg,#200a0a,#341010)">E</span>
+    <div class="cc-item-body">
+      <p class="cc-item-name">エミシアクリニック</p>
+      <p class="cc-item-catch">初診料・送料無料・アフターピル対応</p>
+    </div>
+    <div class="cc-item-price">
+      <span class="cc-item-price-main">約3,250円</span>
+      <span class="cc-item-price-sub">/月（送料無料）</span>
+    </div>
+    <span class="cc-item-arrow">›</span>
+  </div>
+
+  <div class="cc-item" onclick="location.href='compare.html#levacli'">
+    <span class="ad-micro">PR</span>
+    <span class="cc-item-rank ri-n">5</span>
+    <span class="cc-item-icon" style="background:linear-gradient(135deg,#0a2010,#142a18)">L</span>
+    <div class="cc-item-body">
+      <p class="cc-item-name">レバクリ</p>
+      <p class="cc-item-catch">待ち時間なし・オンライン完結</p>
+    </div>
+    <div class="cc-item-price">
+      <span class="cc-item-price-main">公式で確認</span>
+      <span class="cc-item-price-sub"></span>
+    </div>
+    <span class="cc-item-arrow">›</span>
+  </div>
+
 </div>
+
+<div style="padding:12px 16px;text-align:center">
+  <button onclick="location.href='compare.html'"
+    style="background:#fff;border:1.5px solid #ddd;color:#555;font-size:13px;font-weight:700;
+    padding:11px 28px;border-radius:100px;cursor:pointer;font-family:inherit;
+    width:100%;transition:background .15s">
+    詳細比較・料金を確認する →
+  </button>
+</div>
+
+<!-- 記事 -->
+<div class="sh" style="margin-top:8px">
+  <h2>基礎知識・記事</h2>
+  <a href="article-basic.html">すべて見る →</a>
+</div>
+<div class="art-grid">
+  <div class="art-grid-card" onclick="location.href='article-basic.html'">
+    <div class="art-grid-img" style="background:#e6f7f3">💊</div>
+    <div class="art-grid-body"><p class="art-grid-cat">基礎知識</p><p class="art-grid-title">低用量ピルとは？効果・種類</p></div>
+  </div>
+  <div class="art-grid-card" onclick="location.href='article-side-effects.html'">
+    <div class="art-grid-img" style="background:#fff4ee">😣</div>
+    <div class="art-grid-body"><p class="art-grid-cat">副作用</p><p class="art-grid-title">吐き気はいつまで続く？</p></div>
+  </div>
+  <div class="art-grid-card" onclick="location.href='article-wetness.html'">
+    <div class="art-grid-img" style="background:#fff5f5">💧</div>
+    <div class="art-grid-body"><p class="art-grid-cat">副作用</p><p class="art-grid-title">濡れにくくなった？</p></div>
+  </div>
+  <div class="art-grid-card" onclick="location.href='article-afterpill.html'">
+    <div class="art-grid-img" style="background:#fff0f0">🆘</div>
+    <div class="art-grid-body"><p class="art-grid-cat">アフターピル</p><p class="art-grid-title">72時間以内の処方方法</p></div>
+  </div>
+  <div class="art-grid-card" onclick="location.href='article-pms.html'">
+    <div class="art-grid-img" style="background:#f8f0ff">🌙</div>
+    <div class="art-grid-body"><p class="art-grid-cat">PMS</p><p class="art-grid-title">PMSにピルは効く？</p></div>
+  </div>
+  <div class="art-grid-card" onclick="location.href='article-boyfriend.html'">
+    <div class="art-grid-img" style="background:#f0f8ff">💙</div>
+    <div class="art-grid-body"><p class="art-grid-cat">彼氏向け</p><p class="art-grid-title">彼女がピルを飲んでいること</p></div>
+  </div>
+</div>
+
 <div class="disclaimer">
-  【広告表示】本サイトはA8.net等のアフィリエイトプログラムに参加しています。当サイトを経由してサービスに申し込みが発生した場合、報酬を受け取る場合があります。掲載情報は各クリニックの公式サイトをもとに整理していますが、料金・サービス内容は変更される場合があるため、必ず公式サイトでご確認ください。本サイトは医療機関ではありません。
+  【広告表示】本サイトはA8.net等のアフィリエイトプログラムに参加しています。当サイトを経由して申し込みが発生した場合、報酬を受け取る場合があります。掲載情報は各クリニックの公式サイトをもとに整理していますが変更される場合があります。必ず公式サイトでご確認ください。本サイトは医療機関ではありません。
 </div>
 <footer class="footer">
   <div class="footer-logo">ぴる<em>ナビ</em></div>
-  <p class="footer-desc">オンラインピル処方クリニックの公式情報をもとにした比較・情報サイトです。</p>
+  <p class="footer-desc">オンラインピル処方クリニックの比較・情報サイト。公式情報をもとに整理しています。</p>
   <div class="footer-links">
-    <a href="index.html">クリニック比較</a>
+    <a href="index.html">ホーム</a>
+    <a href="shindan.html">ピル選び診断</a>
+    <a href="compare.html">クリニック比較</a>
     <a href="article-basic.html">基礎知識</a>
     <a href="article-cost.html">費用比較</a>
     <a href="article-side-effects.html">副作用</a>
     <a href="article-afterpill.html">アフターピル</a>
-    <a href="article-forget.html">飲み忘れ</a>
-    <a href="article-pms.html">PMS・月経</a>
+    <a href="article-pms.html">PMS</a>
+    <a href="article-boyfriend.html">彼氏向け</a>
+    <a href="article-wetness.html">濡れにくくなった</a>
     <a href="privacy.html">プライバシーポリシー</a>
     <a href="contact.html">お問い合わせ</a>
   </div>
   <p class="footer-copy">© 2026 ぴるナビ — 本サイトはアフィリエイト広告を利用しています</p>
 </footer><div class="sf">
-  <button class="sf-sub" onclick="location.href='article-basic.html'">基礎知識を読む</button>
-  <button class="sf-main" onclick="location.href='#mederi'">メデリピルの詳細を見る →</button>
+  <button class="sf-sub" onclick="location.href='shindan.html'">ピル選び診断</button>
+  <button class="sf-main" onclick="location.href='compare.html'">クリニックを比較する →</button>
 </div>
 <script>
 'use strict';
-// フィルター
-function filt(tag, btn) {
-  document.querySelectorAll('.fp').forEach(b => b.classList.remove('on'));
-  btn.classList.add('on');
-  let n = 0;
-  document.querySelectorAll('.rc[data-tags]').forEach(c => {
-    const tags = c.dataset.tags || '';
-    const show = tag === 'all' || tags.includes(tag);
-    c.style.display = show ? 'block' : 'none';
-    if (show) n++;
+
+const AFFILIATE_LINKS = {
+  MEDERI:   'https://mederi.jp',
+  MYPILL:   'https://mypill.jp',
+  LUNALUNA: 'https://medicine.lnln.jp',
+  LEVACLI:  'https://leva-cli.jp',
+  EMISIA:   'https://emisia-clinic.jp',
+  SMALUNA:  'https://smaluna.com',
+};
+function applyLinks() {
+  document.querySelectorAll('[data-affiliate]').forEach(el => {
+    const key = el.dataset.affiliate.toUpperCase();
+    const url = AFFILIATE_LINKS[key];
+    if (!url) return;
+    if (el.tagName === 'A') { el.href = url; el.target = '_blank'; el.rel = 'noopener noreferrer'; }
+    else { el.addEventListener('click', () => window.open(url,'_blank','noopener,noreferrer')); }
   });
-  const cnt = document.getElementById('rcnt');
-  if (cnt) cnt.textContent = n;
 }
+
+
 // アコーディオン
-document.querySelectorAll('[data-accordion]').forEach(root => {
-  root.querySelectorAll('[data-accordion-item]').forEach(item => {
-    const trigger = item.querySelector('[data-accordion-trigger]');
-    const body    = item.querySelector('[data-accordion-body]');
-    if (!trigger || !body) return;
-    trigger.addEventListener('click', () => {
-      const open = trigger.getAttribute('aria-expanded') === 'true';
-      root.querySelectorAll('[data-accordion-trigger]').forEach(t => t.setAttribute('aria-expanded','false'));
-      root.querySelectorAll('[data-accordion-item]').forEach(i => i.classList.remove('open'));
-      root.querySelectorAll('[data-accordion-body]').forEach(b => { b.style.height = '0'; });
-      if (!open) {
-        trigger.setAttribute('aria-expanded','true');
+document.querySelectorAll('.qa-wrap').forEach(wrap=>{
+  wrap.querySelectorAll('.qa-item').forEach(item=>{
+    const btn=item.querySelector('.qa-q');
+    const body=item.querySelector('.qa-body');
+    if(!btn||!body) return;
+    btn.addEventListener('click',()=>{
+      const open=item.classList.contains('open');
+      wrap.querySelectorAll('.qa-item').forEach(i=>{
+        i.classList.remove('open');
+        const b=i.querySelector('.qa-body');
+        if(b) b.style.height='0';
+      });
+      if(!open){
         item.classList.add('open');
-        body.style.height = body.scrollHeight + 'px';
-        body.addEventListener('transitionend', () => {
-          if (item.classList.contains('open')) body.style.height = 'auto';
-        }, { once: true });
+        body.style.height=body.scrollHeight+'px';
+        body.addEventListener('transitionend',()=>{
+          if(item.classList.contains('open')) body.style.height='auto';
+        },{once:true});
       }
     });
   });
 });
-// お気に入り
-let favs = new Set();
-try { const s = localStorage.getItem('pirunavi_favs'); if (s) favs = new Set(JSON.parse(s)); } catch {}
-function syncFav(btn) {
-  const id = btn.dataset.fav;
-  btn.classList.toggle('faved', favs.has(id));
-  btn.textContent = favs.has(id) ? '♥' : '♡';
-}
-document.querySelectorAll('[data-fav]').forEach(btn => {
-  syncFav(btn);
-  btn.addEventListener('click', e => {
-    e.stopPropagation();
-    const id = btn.dataset.fav;
-    favs.has(id) ? favs.delete(id) : favs.add(id);
-    syncFav(btn);
-    btn.classList.add('faved');
-    try { localStorage.setItem('pirunavi_favs', JSON.stringify([...favs])); } catch {}
-  });
-});
+
+// シェア
+document.querySelectorAll('.share-x').forEach(b=>b.addEventListener('click',()=>
+  window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title))));
+document.querySelectorAll('.share-line').forEach(b=>b.addEventListener('click',()=>
+  window.open('https://social-plugins.line.me/lineit/share?url='+encodeURIComponent(location.href))));
+
+applyLinks();
 </script>
 </body></html>
