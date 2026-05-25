@@ -5,15 +5,45 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="ぴるナビへのお問い合わせページ。掲載情報の誤り・ご意見・広告掲載のご相談はこちらから。">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-<meta name="google-site-verification" content="-Xd5XiKf7QlGk2-sBm8OeTxUWGM7nGD5sT6_4Wi1lSw">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="-Xd5XiKf7QlGk2-sBm8OeTxUWGM7nGD5sT6_4Wi1lSw">
 <title>お問い合わせ｜ぴるナビ</title>
 <style>
+
+:root {
+  --clr-primary:     #E8707A;   /* ローズピンク（メイン） */
+  --clr-primary-d:   #D45E68;   /* 濃いめローズ */
+  --clr-primary-l:   #FDF0F1;   /* 薄いローズ背景 */
+  --clr-primary-b:   #F5C5C8;   /* ローズボーダー */
+  --clr-secondary:   #7A9E8E;   /* セージグリーン */
+  --clr-secondary-l: #EEF5F2;   /* 薄いグリーン背景 */
+  --clr-secondary-b: #B8D5CA;   /* グリーンボーダー */
+  --clr-amber:       #D4956A;   /* アンバー（注意・サブ） */
+  --clr-amber-l:     #FDF5EE;
+  --clr-amber-b:     #EDD5BE;
+  --clr-ink:         #2D2828;   /* ソフトブラック */
+  --clr-ink-2:       #5C5555;
+  --clr-ink-3:       #9B9393;
+  --clr-ink-4:       #C8C0C0;
+  --clr-bg:          #FDFAF8;   /* オフホワイト */
+  --clr-bg-2:        #FFFFFF;
+  --clr-bg-3:        #F5F1EF;
+  --clr-border:      #EDE8E5;
+  --clr-border-2:    #DDD7D4;
+  --ff-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-full: 100px;
+  --shadow-sm: 0 2px 8px rgba(45,40,40,.06);
+  --shadow-md: 0 6px 20px rgba(45,40,40,.09);
+}
+
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#f7f7f5;color:#1a1a1a;font-family:'Noto Sans JP',sans-serif;font-size:14px;line-height:2}
 .nav{height:56px;background:#fff;border-bottom:1px solid #eee;display:flex;align-items:center;justify-content:space-between;padding:0 20px;position:sticky;top:0;z-index:100}
 .nav-logo{font-size:18px;font-weight:900}
-.nav-logo em{color:#00b894;font-style:normal}
+.nav-logo em{color:var(--clr-primary,#E8707A);font-style:normal}
 .nav-back{font-size:13px;color:#888}
 .wrap{max-width:560px;margin:0 auto;padding:48px 24px}
 h1{font-size:24px;font-weight:900;margin-bottom:8px}
@@ -25,7 +55,7 @@ input[type="text"],input[type="email"],textarea,select{
   width:100%;border:1.5px solid #ddd;border-radius:8px;
   padding:12px 14px;font-size:14px;font-family:inherit;
   background:#fff;color:#1a1a1a;outline:none;transition:border-color .15s}
-input:focus,textarea:focus,select:focus{border-color:#00b894}
+input:focus,textarea:focus,select:focus{border-color:var(--clr-primary,#E8707A)}
 textarea{height:160px;resize:vertical;line-height:1.8}
 .submit-btn{width:100%;background:#1a1a1a;color:#fff;font-size:15px;font-weight:700;
   padding:15px;border-radius:100px;border:none;cursor:pointer;font-family:inherit;
@@ -35,6 +65,12 @@ textarea{height:160px;resize:vertical;line-height:1.8}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2KF83FY3D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B2KF83FY3D');
+</script>
 </head>
 <body>
 <nav class="nav">
@@ -68,7 +104,7 @@ textarea{height:160px;resize:vertical;line-height:1.8}
       <textarea name="message" placeholder="お問い合わせ内容をご記入ください" required></textarea>
     </div>
     <button type="submit" class="submit-btn">送信する</button>
-    <p class="note">送信内容は <a href="privacy.html" style="color:#00b894">プライバシーポリシー</a> に従って取り扱います。</p>
+    <p class="note">送信内容は <a href="privacy.html" style="color:var(--clr-primary,#E8707A)">プライバシーポリシー</a> に従って取り扱います。</p>
   </form>
 </div>
 </body>

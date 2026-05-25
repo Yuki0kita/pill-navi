@@ -3,16 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; frame-src 'none'; object-src 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-src 'none'; object-src 'none';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta name="description" content="メデリピル・マイピル・ルナルナ・レバクリの費用を公式情報をもとに比較。料金は必ず公式サイトで確認を。">
-<meta name="google-site-verification" content="-Xd5XiKf7QlGk2-sBm8OeTxUWGM7nGD5sT6_4Wi1lSw">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="-Xd5XiKf7QlGk2-sBm8OeTxUWGM7nGD5sT6_4Wi1lSw">
 <title>オンラインピル処方の費用を比較｜クリニック別に整理｜ぴるナビ</title>
 <style>
+
+:root {
+  --clr-primary:     #E8707A;   /* ローズピンク（メイン） */
+  --clr-primary-d:   #D45E68;   /* 濃いめローズ */
+  --clr-primary-l:   #FDF0F1;   /* 薄いローズ背景 */
+  --clr-primary-b:   #F5C5C8;   /* ローズボーダー */
+  --clr-secondary:   #7A9E8E;   /* セージグリーン */
+  --clr-secondary-l: #EEF5F2;   /* 薄いグリーン背景 */
+  --clr-secondary-b: #B8D5CA;   /* グリーンボーダー */
+  --clr-amber:       #D4956A;   /* アンバー（注意・サブ） */
+  --clr-amber-l:     #FDF5EE;
+  --clr-amber-b:     #EDD5BE;
+  --clr-ink:         #2D2828;   /* ソフトブラック */
+  --clr-ink-2:       #5C5555;
+  --clr-ink-3:       #9B9393;
+  --clr-ink-4:       #C8C0C0;
+  --clr-bg:          #FDFAF8;   /* オフホワイト */
+  --clr-bg-2:        #FFFFFF;
+  --clr-bg-3:        #F5F1EF;
+  --clr-border:      #EDE8E5;
+  --clr-border-2:    #DDD7D4;
+  --ff-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-full: 100px;
+  --shadow-sm: 0 2px 8px rgba(45,40,40,.06);
+  --shadow-md: 0 6px 20px rgba(45,40,40,.09);
+}
+
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{background:#f7f7f5;color:#1a1a1a;
@@ -28,11 +58,11 @@ img{max-width:100%;display:block}
   display:flex;align-items:center;justify-content:space-between;
   padding:0 20px;position:sticky;top:0;z-index:100}
 .nav-logo{font-size:18px;font-weight:900;letter-spacing:-.02em;color:#1a1a1a}
-.nav-logo em{color:#00b894;font-style:normal}
+.nav-logo em{color:var(--clr-primary,#E8707A);font-style:normal}
 .nav-r{display:flex;align-items:center;gap:14px}
 .nav-r a{font-size:12px;color:#999;transition:color .15s}
 .nav-r a:hover{color:#1a1a1a}
-.nav-cta{background:#1a1a1a;color:#fff!important;font-size:12px;font-weight:700;
+.nav-cta{background:var(--clr-primary,#E8707A);color:#fff!important;font-size:12px;font-weight:700;
   padding:8px 16px;border-radius:100px}
 
 /* BREADCRUMB */
@@ -45,7 +75,7 @@ img{max-width:100%;display:block}
 .art-hero{background:#fff;border-bottom:1px solid #f0f0f0}
 .art-hero-inner{max-width:680px;margin:0 auto;padding:32px 20px 0}
 .art-cat{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
-  color:#00b894;margin-bottom:12px;display:block}
+  color:var(--clr-primary,#E8707A);margin-bottom:12px;display:block}
 .art-title{font-size:clamp(22px,5vw,32px);font-weight:900;line-height:1.35;
   color:#1a1a1a;margin-bottom:16px;letter-spacing:-.02em}
 .art-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:#aaa;
@@ -82,7 +112,7 @@ img{max-width:100%;display:block}
 .art-body ol li::before{content:counter(ol);position:absolute;left:0;top:3px;
   width:16px;height:16px;border-radius:50%;background:#1a1a1a;color:#fff;
   font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
-.art-body a{color:#00b894;text-decoration:underline;text-underline-offset:3px}
+.art-body a{color:var(--clr-primary,#E8707A);text-decoration:underline;text-underline-offset:3px}
 .art-body hr{border:none;border-top:1px solid #f0f0f0;margin:40px 0}
 
 /* 目次 */
@@ -97,7 +127,7 @@ img{max-width:100%;display:block}
   text-decoration:none;padding:2px 0}
 .toc-list a::before{content:'';width:5px;height:5px;border-radius:50%;
   background:#00b894;flex-shrink:0}
-.toc-list a:hover{color:#00b894}
+.toc-list a:hover{color:var(--clr-primary,#E8707A)}
 
 /* infobox */
 .info-box{background:#f0faf5;border-left:4px solid #00b894;
@@ -124,7 +154,7 @@ tbody tr:last-child{border-bottom:none}
 tbody tr:hover{background:#fafaf8}
 tbody td{padding:11px 14px;text-align:center;color:#444}
 tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
-.tok{color:#00b894;font-weight:700}
+.tok{color:var(--clr-primary,#E8707A);font-weight:700}
 .tng{color:#ccc}
 .tbl-hi td{background:#f0faf5!important}
 .tbl-note{font-size:11px;color:#aaa;padding:10px 14px;border-top:1px solid #f0f0f0;
@@ -183,7 +213,7 @@ tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
 .related-head{padding:20px 20px 12px;display:flex;
   align-items:center;justify-content:space-between}
 .related-head h2{font-size:15px;font-weight:700}
-.related-head a{font-size:12px;color:#00b894;font-weight:500}
+.related-head a{font-size:12px;color:var(--clr-primary,#E8707A);font-weight:500}
 .related-scroll{display:flex;gap:10px;overflow-x:auto;padding:0 20px 4px;
   -webkit-overflow-scrolling:touch}
 .related-scroll::-webkit-scrollbar{display:none}
@@ -192,7 +222,7 @@ tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
 .rel-card:hover{box-shadow:0 4px 14px rgba(0,0,0,.07)}
 .rel-img{height:84px;display:flex;align-items:center;justify-content:center}
 .rel-body{padding:10px 12px}
-.rel-cat{font-size:10px;color:#00b894;font-weight:700;letter-spacing:.08em;
+.rel-cat{font-size:10px;color:var(--clr-primary,#E8707A);font-weight:700;letter-spacing:.08em;
   text-transform:uppercase;margin-bottom:3px}
 .rel-title{font-size:12px;font-weight:600;line-height:1.6;color:#1a1a1a}
 
@@ -203,7 +233,7 @@ tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
 /* FOOTER */
 .footer{background:#1a1a1a;padding:36px 20px 24px}
 .footer-logo{font-size:18px;font-weight:900;color:#fff;margin-bottom:8px}
-.footer-logo em{color:#00b894;font-style:normal}
+.footer-logo em{color:var(--clr-primary,#E8707A);font-style:normal}
 .footer-desc{font-size:11px;color:rgba(255,255,255,.28);line-height:2;margin-bottom:18px}
 .footer-links{display:flex;flex-wrap:wrap;gap:8px 16px;margin-bottom:18px}
 .footer-links a{font-size:11px;color:rgba(255,255,255,.3)}
@@ -228,7 +258,7 @@ tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
   color:#aaa;background:none;border:none;cursor:pointer;
   border-bottom:2px solid transparent;transition:color .15s,border-color .15s;
   white-space:nowrap}
-.tab-btn.on{color:#1a1a1a;border-bottom-color:#00b894}
+.tab-btn.on{color:#1a1a1a;border-bottom-color:var(--clr-primary,#E8707A)}
 .tab-panel{display:none;max-width:680px;margin:0 auto;padding:32px 20px}
 .tab-panel.on{display:block}
 
@@ -242,13 +272,19 @@ tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2KF83FY3D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-B2KF83FY3D');
+</script>
 </head>
 <body><nav class="nav">
   <a href="index.html" class="nav-logo" style="text-decoration:none">ぴる<em>ナビ</em></a>
   <div class="nav-r">
     <a href="index.html">クリニック比較</a>
     <a href="article-basic.html">基礎知識</a>
-    <a href="index.html" class="nav-cta">クリニックを探す</a>
+    <a href="compare.html" class="nav-cta">クリニックを探す</a>
   </div>
 </nav>
 <div class="bc">
