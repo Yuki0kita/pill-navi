@@ -444,10 +444,31 @@ img{max-width:100%;display:block}
   font-size:14px;font-weight:700;padding:13px 0;
   border-radius:var(--r-full);border:none;cursor:pointer;
   font-family:inherit;transition:opacity .15s;text-align:center;
+  display:flex;align-items:center;justify-content:center;text-decoration:none;
 }
 .cd-cta-btn:hover{opacity:.82}
 .cd-cta-btn.primary{background:var(--clr-primary)}
 .cd-note{font-size:11px;color:var(--clr-ink-4);padding-bottom:13px;line-height:1.8}
+
+/* レバクリ A8.net広告 */
+.levacli-ad{
+  margin:16px 0 18px;padding:12px;
+  background:var(--clr-bg-2);border:1px solid var(--clr-border);
+  border-radius:var(--r-md);text-align:center;
+}
+.levacli-ad-head{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;margin-bottom:10px;font-size:10px;color:var(--clr-ink-4);
+}
+.levacli-ad-badge{
+  background:var(--clr-primary);color:#fff;font-weight:700;
+  padding:3px 9px;border-radius:var(--r-full);
+}
+.levacli-ad-banner{
+  display:block;width:min(300px,100%);margin:0 auto;
+  line-height:0;border-radius:var(--r-sm);overflow:hidden;
+}
+.levacli-ad-banner img{display:block;width:100%;height:auto}
 
 /* 診断UI */
 .shindan-wrap{max-width:640px;margin:0 auto;padding:0 20px 48px}
@@ -725,13 +746,24 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
     <p class="ad-pr">PR・広告</p>
     <p class="cd-name">レバクリ</p>
     <p class="cd-catch">待ち時間なしで治療ができるオンラインのピルクリニック。詳細は公式サイトでご確認ください。</p>
+    <div class="levacli-ad" aria-label="レバクリの広告">
+      <div class="levacli-ad-head">
+        <span class="levacli-ad-badge">PR・広告</span>
+        <span>A8.net 提携広告</span>
+      </div>
+      <a class="levacli-ad-banner" href="https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVNAP" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="オンラインピル診療 レバクリの公式サイトを見る">
+        <img border="0" width="300" height="250" alt="オンラインピル診療 レバクリ" src="https://www27.a8.net/svt/bgt?aid=260523621425&amp;wid=003&amp;eno=01&amp;mid=s00000025176003003000&amp;mc=1">
+      </a>
+      <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B3XB9+711AF6+5E9C+HVNAP" alt="">
+    </div>
     <table class="spec-tbl">
       <tr><td>初診料</td><td>公式サイトで確認</td></tr>
       <tr><td>低用量ピル</td><td>公式サイトで確認</td></tr>
     </table>
     <div class="chips2"><span class="chip">待ち時間なし</span><span class="chip-g">料金は公式で確認</span></div>
   </div>
-  <div class="cd-cta"><button class="cd-cta-btn" data-affiliate="LEVACLI">レバクリ 公式サイトを見る →</button></div>
+  <div class="cd-cta"><a class="cd-cta-btn" data-affiliate="LEVACLI" href="https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY" target="_blank" rel="nofollow sponsored noopener noreferrer">オンラインピル診療【レバクリ】</a></div>
+  <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3XB9+711AF6+5E9C+HVFKY" alt="">
   <p class="cd-note">※料金・サービスは変更される場合があります。最新情報は公式サイトでご確認ください。</p>
 </div>
 
@@ -814,7 +846,7 @@ const AFFILIATE_LINKS = {
   MEDERI:   'https://mederi.jp',
   MYPILL:   'https://mypill.jp',
   LUNALUNA: 'https://medicine.lnln.jp',
-  LEVACLI:  'https://leva-cli.jp',
+  LEVACLI:  'https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY',
   EMISIA:   'https://emisia-clinic.jp',
   SMALUNA:  'https://smaluna.com',
   BQCELL:   'https://meon-premier.gangnamdoll.jp/pages/bqcell-peeling-subscription?view=bqcell-2025&preview_theme_id=148281458887',
@@ -824,7 +856,7 @@ function applyLinks(){
     const key=el.dataset.affiliate.toUpperCase();
     const url=AFFILIATE_LINKS[key];
     if(!url) return;
-    if(el.tagName==='A'){el.href=url;el.target='_blank';el.rel='noopener noreferrer';}
+    if(el.tagName==='A'){el.href=url;el.target='_blank';el.rel='nofollow sponsored noopener noreferrer';}
     else{el.addEventListener('click',()=>window.open(url,'_blank','noopener,noreferrer'));}
   });
 }

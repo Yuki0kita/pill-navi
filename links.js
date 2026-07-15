@@ -23,7 +23,7 @@ const AFFILIATE_LINKS = {
   MEDERI:   'https://mederi.jp',
   MYPILL:   'https://mypill.jp',
   LUNALUNA: 'https://medicine.lnln.jp',
-  LEVACLI:  'https://leva-cli.jp',
+  LEVACLI:  'https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY',
   EMISIA:   'https://emisia-clinic.jp',
   SMALUNA:  'https://smaluna.com',          // A8.net未掲載・直リンク
   // ── 美容系（A8.net承認済み） ──
@@ -36,7 +36,7 @@ function applyAffiliateLinks() {
     const url = AFFILIATE_LINKS[key];
     if (!url) return;
     if (el.tagName === 'A') {
-      el.href = url; el.target = '_blank'; el.rel = 'noopener noreferrer';
+      el.href = url; el.target = '_blank'; el.rel = 'nofollow sponsored noopener noreferrer';
     } else {
       el.addEventListener('click', () => window.open(url, '_blank', 'noopener,noreferrer'));
     }

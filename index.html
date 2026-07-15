@@ -175,6 +175,7 @@ img{max-width:100%;display:block}
   display:flex;align-items:center;gap:12px;
   padding:13px 16px;cursor:pointer;
   transition:background .12s;position:relative;
+  color:inherit;text-decoration:none;
 }
 .cc-item:hover{background:var(--clr-primary-l)}
 .cc-item-rank{
@@ -665,7 +666,7 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
     </div>
     <span class="cc-item-arrow">›</span>
   </div>
-  <div class="cc-item" onclick="location.href='compare.html#levacli'">
+  <a class="cc-item" href="https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="オンラインピル診療 レバクリの公式サイトを見る（PR）">
     <span class="ad-micro">PR</span>
     <span class="cc-item-rank ri-n">5</span>
     <div class="cc-item-icon" style="background:linear-gradient(135deg,#1F2A20,#2A3D2A)">L</div>
@@ -678,8 +679,9 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
       <span class="cc-item-price-sub"></span>
     </div>
     <span class="cc-item-arrow">›</span>
-  </div>
+  </a>
 </div>
+<img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3XB9+711AF6+5E9C+HVFKY" alt="">
 
 <div style="padding:10px 16px">
   <button onclick="location.href='compare.html'"
@@ -785,7 +787,7 @@ const AFFILIATE_LINKS = {
   MEDERI:   'https://mederi.jp',
   MYPILL:   'https://mypill.jp',
   LUNALUNA: 'https://medicine.lnln.jp',
-  LEVACLI:  'https://leva-cli.jp',
+  LEVACLI:  'https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY',
   EMISIA:   'https://emisia-clinic.jp',
   SMALUNA:  'https://smaluna.com',
   BQCELL:   'https://meon-premier.gangnamdoll.jp/pages/bqcell-peeling-subscription?view=bqcell-2025&preview_theme_id=148281458887',
@@ -795,7 +797,7 @@ function applyLinks(){
     const key=el.dataset.affiliate.toUpperCase();
     const url=AFFILIATE_LINKS[key];
     if(!url) return;
-    if(el.tagName==='A'){el.href=url;el.target='_blank';el.rel='noopener noreferrer';}
+    if(el.tagName==='A'){el.href=url;el.target='_blank';el.rel='nofollow sponsored noopener noreferrer';}
     else{el.addEventListener('click',()=>window.open(url,'_blank','noopener,noreferrer'));}
   });
 }
