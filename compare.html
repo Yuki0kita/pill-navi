@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-src 'none'; object-src 'none';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -577,6 +578,14 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
   .art-grid{padding-left:28px;padding-right:28px}
 }
 
+
+/* 運営終了の告知（2026-09） */
+.closed-notice{
+  background:#FFF4F5;border-bottom:2px solid #E8707A;
+  padding:16px 20px;color:#5A3B3E;font-size:14px;line-height:1.9;
+}
+.closed-notice-inner{max-width:760px;margin:0 auto}
+.closed-notice b{display:block;font-size:15px;color:#B0424D;margin-bottom:4px}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2KF83FY3D"></script>
@@ -587,7 +596,15 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
   gtag('config', 'G-B2KF83FY3D');
 </script>
 </head>
-<body><nav class="nav">
+<body>
+<div class="closed-notice">
+  <div class="closed-notice-inner">
+    <b>このサイトは更新を終了しました（2026年9月）</b>
+    掲載している料金・診療内容は更新しておらず、現在の情報と異なる場合があります。
+    ピルの服用やクリニックの選択は、必ず各クリニックの公式サイトと医師の説明をご確認のうえ判断してください。
+  </div>
+</div>
+<nav class="nav">
   <a href="index.html" class="nav-logo">ぴる<em>ナビ</em></a>
   <div class="nav-r">
     <a href="shindan.html">診断</a>
@@ -633,7 +650,6 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
     <div class="cd-thumb" style="background:linear-gradient(135deg,#2D1F24,#4A2A30)">
       <div><span class="cd-thumb-name">メデリピル</span><span class="cd-thumb-catch">産婦人科医がオンライン診療</span></div>
     </div>
-    <p class="ad-pr">PR・広告</p>
     <p class="cd-name">メデリピル</p>
     <p class="cd-catch">産婦人科医によるオンライン診療。初診料無料で最短当日発送。定期配送中心のサービス。</p>
     <table class="spec-tbl">
@@ -661,7 +677,6 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
     <div class="cd-thumb" style="background:linear-gradient(135deg,#1F2A24,#2A3D30)">
       <div><span class="cd-thumb-name">マイピル</span><span class="cd-thumb-catch">産婦人科医による電話診療</span></div>
     </div>
-    <p class="ad-pr">PR・広告</p>
     <p class="cd-name">マイピル</p>
     <p class="cd-catch">産婦人科医による電話診療。平日16時までの決済で当日発送。低用量・アフターピル・生理移動ピルに対応。</p>
     <table class="spec-tbl">
@@ -690,7 +705,6 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
     <div class="cd-thumb" style="background:linear-gradient(135deg,#2A1F38,#3D2A50)">
       <div><span class="cd-thumb-name">ルナルナ おくすり便</span><span class="cd-thumb-catch">生理管理アプリと連携</span></div>
     </div>
-    <p class="ad-pr">PR・広告</p>
     <p class="cd-name">ルナルナ おくすり便</p>
     <p class="cd-catch">ルナルナアプリと連携。チャット＋ビデオ診療対応。送料込みプランあり。</p>
     <table class="spec-tbl">
@@ -716,7 +730,6 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
     <div class="cd-thumb" style="background:linear-gradient(135deg,#2A1F20,#3D2A2C)">
       <div><span class="cd-thumb-name">エミシアクリニック</span><span class="cd-thumb-catch">アフターピル処方実績多数</span></div>
     </div>
-    <p class="ad-pr">PR・広告</p>
     <p class="cd-name">エミシアクリニック</p>
     <p class="cd-catch">初診料・送料ともに無料。アフターピル対応・定期配送対応。</p>
     <table class="spec-tbl">
@@ -743,27 +756,15 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
     <div class="cd-thumb" style="background:linear-gradient(135deg,#1F2A20,#2A3D2A)">
       <div><span class="cd-thumb-name">レバクリ</span><span class="cd-thumb-catch">レバレジーズ系オンライン診療</span></div>
     </div>
-    <p class="ad-pr">PR・広告</p>
     <p class="cd-name">レバクリ</p>
     <p class="cd-catch">待ち時間なしで治療ができるオンラインのピルクリニック。詳細は公式サイトでご確認ください。</p>
-    <div class="levacli-ad" aria-label="レバクリの広告">
-      <div class="levacli-ad-head">
-        <span class="levacli-ad-badge">PR・広告</span>
-        <span>A8.net 提携広告</span>
-      </div>
-      <a class="levacli-ad-banner" href="https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVNAP" target="_blank" rel="nofollow sponsored noopener noreferrer" aria-label="オンラインピル診療 レバクリの公式サイトを見る">
-        <img border="0" width="300" height="250" alt="オンラインピル診療 レバクリ" src="https://www27.a8.net/svt/bgt?aid=260523621425&amp;wid=003&amp;eno=01&amp;mid=s00000025176003003000&amp;mc=1">
-      </a>
-      <img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B3XB9+711AF6+5E9C+HVNAP" alt="">
-    </div>
     <table class="spec-tbl">
       <tr><td>初診料</td><td>公式サイトで確認</td></tr>
       <tr><td>低用量ピル</td><td>公式サイトで確認</td></tr>
     </table>
     <div class="chips2"><span class="chip">待ち時間なし</span><span class="chip-g">料金は公式で確認</span></div>
   </div>
-  <div class="cd-cta"><a class="cd-cta-btn" data-affiliate="LEVACLI" href="https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY" target="_blank" rel="nofollow sponsored noopener noreferrer">オンラインピル診療【レバクリ】</a></div>
-  <img border="0" width="1" height="1" src="https://www10.a8.net/0.gif?a8mat=4B3XB9+711AF6+5E9C+HVFKY" alt="">
+  <div class="cd-cta"><a class="cd-cta-btn" data-affiliate="LEVACLI" href="https://levacli.jp" target="_blank" rel="noopener noreferrer">オンラインピル診療【レバクリ】</a></div>
   <p class="cd-note">※料金・サービスは変更される場合があります。最新情報は公式サイトでご確認ください。</p>
 </div>
 
@@ -780,7 +781,6 @@ tbody td:first-child{text-align:left;font-weight:500;color:var(--clr-ink)}
         <span class="cd-thumb-catch">韓国美容皮膚科の本格ハーブピーリング</span>
       </div>
     </div>
-    <p class="ad-pr">PR・広告（A8.net経由）</p>
     <p class="cd-name">BQCELL ダーマスキンピーリング</p>
     <p class="cd-catch">上場企業グループ運営の韓国コスメブランド。累計120万個販売突破。むき卵のようなつるんとした肌を目指すハーブピーリングを自宅で体験できます。</p>
     <table class="spec-tbl">
@@ -846,7 +846,7 @@ const AFFILIATE_LINKS = {
   MEDERI:   'https://mederi.jp',
   MYPILL:   'https://mypill.jp',
   LUNALUNA: 'https://medicine.lnln.jp',
-  LEVACLI:  'https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY',
+  LEVACLI:  'https://levacli.jp',
   EMISIA:   'https://emisia-clinic.jp',
   SMALUNA:  'https://smaluna.com',
   BQCELL:   'https://meon-premier.gangnamdoll.jp/pages/bqcell-peeling-subscription?view=bqcell-2025&preview_theme_id=148281458887',
