@@ -19,11 +19,11 @@
 'use strict';
 
 const AFFILIATE_LINKS = {
-  // ── ピル系（A8.net承認後にURLを書き換える） ──
+  // ── ピル系（2026-09 運営終了。アフィリエイトリンクは公式サイトへの通常リンクに戻した） ──
   MEDERI:   'https://mederi.jp',
   MYPILL:   'https://mypill.jp',
   LUNALUNA: 'https://medicine.lnln.jp',
-  LEVACLI:  'https://px.a8.net/svt/ejp?a8mat=4B3XB9+711AF6+5E9C+HVFKY',
+  LEVACLI:  'https://levacli.jp',
   EMISIA:   'https://emisia-clinic.jp',
   SMALUNA:  'https://smaluna.com',          // A8.net未掲載・直リンク
   // ── 美容系（A8.net承認済み） ──

@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex,nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com; frame-src 'none'; object-src 'none';">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -269,6 +270,14 @@ tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
   .footer{padding-left:32px;padding-right:32px}
   .tab-panel{padding-left:32px;padding-right:32px}
 }
+
+/* 運営終了の告知（2026-09） */
+.closed-notice{
+  background:#FFF4F5;border-bottom:2px solid #E8707A;
+  padding:16px 20px;color:#5A3B3E;font-size:14px;line-height:1.9;
+}
+.closed-notice-inner{max-width:760px;margin:0 auto}
+.closed-notice b{display:block;font-size:15px;color:#B0424D;margin-bottom:4px}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-B2KF83FY3D"></script>
@@ -279,7 +288,15 @@ tbody td:first-child{text-align:left;font-weight:500;color:#1a1a1a}
   gtag('config', 'G-B2KF83FY3D');
 </script>
 </head>
-<body><nav class="nav">
+<body>
+<div class="closed-notice">
+  <div class="closed-notice-inner">
+    <b>このサイトは更新を終了しました（2026年9月）</b>
+    掲載している料金・診療内容は更新しておらず、現在の情報と異なる場合があります。
+    ピルの服用やクリニックの選択は、必ず各クリニックの公式サイトと医師の説明をご確認のうえ判断してください。
+  </div>
+</div>
+<nav class="nav">
   <a href="index.html" class="nav-logo" style="text-decoration:none">ぴる<em>ナビ</em></a>
   <div class="nav-r">
     <a href="index.html">クリニック比較</a>
@@ -431,7 +448,7 @@ SNSでは今、ピルに関する女性の本音が多く語られています�
 <div class="cta-inline">
   <h3>オンラインクリニックで相談する</h3>
   <p>副作用が気になる方は、まず医師に相談してみてください。<br>ピルの種類を変えることで改善するケースがあります。</p>
-  <a href="index.html">クリニック一覧を見る →</a>
+  <a href="https://levacli.jp" target="_blank" rel="noopener noreferrer">レバクリで相談してみる →</a>
 </div>
 
 <div class="qa-wrap"><div class="qa-item">
